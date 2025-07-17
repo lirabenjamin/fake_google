@@ -43,7 +43,9 @@
         if ("fetch" in window) { const n = window.fetch; window.fetch = function (a, t) { const e = new Headers(t?.headers), r = a instanceof Request ? a.url : a, s = !new URLSearchParams(r).has("x_use_sticky_canary"); return "true" === window.STICKY_CANARY && s && function (n) { if ("string" == typeof n && n.match(/^\//)) return !0; const a = n instanceof URL ? n : new URL(n); if (window.location.host !== a.host) return !1; return !0 }(r) && e.set("X-Use-Sticky-Canary", "always"), n(a, { ...t || {}, headers: e }) } } if ("sendBeacon" in navigator) { const n = navigator.sendBeacon.bind(navigator); navigator.sendBeacon = function (a, t) { const e = function (n) { if ("true" !== window.STICKY_CANARY) return n; const a = n instanceof URL ? n : new URL(n, document.baseURI); if (!a.searchParams.has("x_use_sticky_canary")) return a.searchParams.set("x_use_sticky_canary", "always"), a.toString(); return n }(a); return n.call(navigator, e, t) } } var n = {}; export { n as default };
         ;
 
-<a href="index.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
+<a href="index.html" class="button-medium px-[var(--rem14)] button-primary items-center justify-center button inline-flex" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">
+    Back
+</a>
     </script>
 
 
@@ -20125,21 +20127,7 @@
 </head>
 
 <body>
-    <a href="https://lirabenjamin.github.io/fake_google/index.html" style="position:fixed;top:20px;left:20px;z-index:1000;display:inline-block;padding:10px 18px;background:#fff;border:1px solid #ccc;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-decoration:none;color:#333;font-weight:600;transition:background 0.2s;">
-        &#8592; Back
-    </a>
-    <a rpl class="
-button-medium px-[var(--rem14)]
-button-primary
-
-
-
-items-center justify-center
-button inline-flex " id="shreddit-skip-link"><span class="flex items-center justify-center">
-
-            <span class="flex items-center gap-xs">Skip to main content</span>
-        </span>
-    </a>
+    
     <shreddit-app class="overflow-visible pt-[var(--page-y-padding)] "
         loid="00000000008mxjxetj.2.1603747866311.Z0FBQUFBQm9kdk0tY1pzTkFSelk2a0tMaER6UjZvTnc0TmFROVh1YWVlenpveWVJMDJ4YThWZ3VPOG1rQXVXYXVkbi1mY0xQc1FaT3ZKN29nUmZGcGR4UkhVSzV2Q09LU2Q1b2s1STFmOFFLblhVdXpSOF9jazZKTHc4YkdPLTFFZEtXaTliWm13aEY"
         user-logged-in="true" correlation-id="c0bcd048-78f0-4461-a468-ce860d3d259d"
@@ -24515,5 +24503,6 @@ button inline-flex " id="flex-nav-collapse-button">
     </script>
 
 </body>
+    <a href="index.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
 
 </html>
