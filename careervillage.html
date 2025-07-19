@@ -280,7 +280,19 @@ CareerVillage</title>
   </div>
 
 </div>
-
+<script>
+  // Disable *external* links but keep their styling intact
+  document.addEventListener('DOMContentLoaded', () => {
+    document
+      .querySelectorAll('a[href^="http"]:not([data-allow-external])')
+      .forEach(link => {
+        link.addEventListener('click', e => e.preventDefault());
+        // Optional visual cue:
+        link.style.opacity = '0.7';
+        link.style.cursor  = 'not-allowed';
+      });
+  });
+</script>
 <script type="text/javascript">
     var browser = navigator.userAgent;
     if (browser.indexOf('MSIE') >= 0 || browser.indexOf("Trident") >= 0) {
