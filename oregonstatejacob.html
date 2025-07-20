@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Cover Letters | Career Development Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        header {
+            background-color: #d73f09;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 0.5rem 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .nav-list li a:hover {
+            color: #f39c12;
+        }
+
+        .nav-list li {
+            color: white;
+            padding: 0.5rem 0;
+            display: block;
+        }
+
+        .search-button {
+            background: #34495e;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .breadcrumb {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+        }
+
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: ">";
+            margin-left: 0.5rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #d73f09;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #d73f09;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #d73f09;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .intro-text {
+            background-color: #e8f4fd;
+            padding: 1.5rem;
+            border-left: 4px solid #3498db;
+            margin-bottom: 2rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .sample-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .sample-link {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .sample-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            color: white;
+        }
+
+        .cover-letter-outline {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.8;
+        }
+
+        .cover-letter-outline .header-info {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .cover-letter-outline .recipient-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .cover-letter-outline p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .signature-area {
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .footer-info {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .footer-links span {
+            color: #ecf0f1;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .sample-links {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <div class="header-content">
+            <h1>Career Development Center</h1>
+            <div class="subtitle">Resumes, CVs & Cover Letters</div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <ul class="nav-list">
+                <li>About</li>
+                <li>Faculty & Staff Tools</li>
+                <li>Employers</li>
+                <li>Alumni</li>
+                <li>Student Resources</li>
+                <li>Explore Careers</li>
+                <li>Resumes, CVs & Cover Letters</li>
+                <li>Find Jobs & Internships</li>
+                <li>Interviews & Networking</li>
+                <li>Career Events</li>
+                <li>Make an Appointment</li>
+            </ul>
+            <button class="search-button">Open Search Page</button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="container">
+        <div class="breadcrumb">
+            <strong>Breadcrumb</strong>
+            <ol>
+                <li>Home</li>
+                <li>Cover Letters</li>
+            </ol>
+        </div>
+
+        <h2>Sample Cover Letters</h2>
+
+        <div class="intro-text">
+            Don't neglect the cover letter! It can help you show your passion for the organization and the preparation you've done in applying specifically to them. See below for a cover letter template you can adapt to suit your own experiences and the jobs you are applying for. Use this as a starting point, along with the resources on our cover letter overview page, to inspire you when you are not sure what to include in your cover letter.
+        </div>
+
+        <div class="sample-links">
+            
+            <a href="oregon-labassistant.html" class="sample-link">
+                <strong>Lab Assistant Cover Letter Sample</strong>
+            </a>
+            <a href="oregon-businesscoordinator.html" class="sample-link">
+                <strong>Business Coordinator Cover Letter Sample</strong>
+            </a>
+            <a href="oregon-agricultural.html" class="sample-link">
+                <strong>Agricultural Specialist Cover Letter Sample</strong>
+            </a>
+        </div>
+
+        <h3>Cover Letter Outline</h3>
+
+        <div class="cover-letter-outline">
+            <div class="header-info">
+                <strong>First Name Last Name</strong><br>
+                Email Address | Phone Number | Physical Address or LinkedIn URL<br><br>
+                Date
+            </div>
+
+            <div class="recipient-info">
+                First and Last Name of Recruiter<br>
+                Their Position/Title<br>
+                Organization<br>
+                Street Address<br>
+                City, State Zip
+            </div>
+
+            <p><strong>Dear [Director or Coordinator _______] or [Hiring Manager]:</strong></p>
+
+            <p><strong>Opening paragraph.</strong> State your reason for the letter: the position you are applying for, how you heard about it and your interest. Do your research on the company so you have a clear sense of how your skills align and why you want to work there.</p>
+
+            <p><strong>Second/third paragraph.</strong> List examples and illustrate how and why you are a qualified candidate. Describe relevant work, volunteer, educational or personal experiences not listed in your résumé or expand on what was listed. Focus on results and achievements that tell the story of who you are and what you offer as a candidate.</p>
+
+            <p><strong>Closing paragraph.</strong> Share your desire to meet with them/follow up in person, preferably for an interview. Thank them and tell them you can be reached at any of your provided contact information.</p>
+
+            <div class="signature-area">
+                Sincerely, Best regards, etc.<br><br>
+                Your signature<br>
+                <strong>Your full name</strong>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <strong>Career Development Center</strong><br>
+                A110 Kerr Administration Building | 1500 SW Jefferson Ave | Corvallis OR 97331 | 541-737-4085
+            </div>
+            
+            <div class="footer-links">
+                <a href="#contact">Contact Us</a>
+                <a href="#acknowledgement">Land Acknowledgement</a>
+                <a href="#copyright">Copyright © 2025 Oregon State University</a>
+                <a href="#privacy">Privacy Disclaimer and Accessibility Information</a>
+                <a href="#nondiscrimination">Non-discrimination Statement</a>
+                <a href="#sitemap">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+ </script>
+
+</body>
+    <a href="index1.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
+
+</html>

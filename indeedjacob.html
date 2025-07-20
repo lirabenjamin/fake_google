@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter Samples - Indeed Career Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #2557a7;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .breadcrumb {
+            background-color: #e8f4fd;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .breadcrumb-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #2557a7;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            min-height: calc(100vh - 200px);
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2557a7;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .intro-section {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #2557a7;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .cover-letter-parts {
+            background-color: white;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .parts-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .parts-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .parts-list li {
+            padding: 8px 12px;
+            background-color: #f1f3f4;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .job-titles-section {
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .job-link {
+            display: block;
+            padding: 12px 16px;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            color: #2557a7;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .job-link:hover {
+            background-color: #f0f7ff;
+            border-color: #2557a7;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(37, 87, 167, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .search-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #2557a7;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .job-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <span class="logo">indeed</span>
+            <nav>
+                <ul class="nav-links">
+                    <li>Finding a job</li>
+                    <li>Interviewing</li>
+                    <li>Pay & salary</li>
+                    <li>News</li>
+                    <li>Search articles</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            Career Guide > Cover letter samples
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="page-title">Cover Letter Samples</h1>
+        
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search for cover letter samples by job title...">
+        </div>
+
+        <div class="intro-section">
+            <p class="intro-text">
+                When you're applying for a job, a cover letter lets you show a personal side and demonstrate why hiring you is a smart decision. Cover letters should be around three paragraphs long and include specific examples from your past experience that make you qualified for the position.
+            </p>
+            
+            <div class="cover-letter-parts">
+                <h3 class="parts-title">A cover letter should include the following parts:</h3>
+                <ul class="parts-list">
+                    <li>Header</li>
+                    <li>Salutation</li>
+                    <li>Introduction</li>
+                    <li>Body paragraph</li>
+                    <li>Closing paragraph</li>
+                    <li>Letter ending and signature</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job-titles-section">
+            <h2 class="section-title">Browse Cover Letters by Job Title</h2>
+            <p class="section-subtitle">The following cover letter samples and examples will show you how to write a cover letter for many employment circumstances. Browse cover letters by job title for inspiration.</p>
+            
+            <div class="job-grid">
+                <a href="#" class="job-link">Academic Advisor</a>
+                <a href="#" class="job-link">Account Executive</a>
+                <a href="#" class="job-link">Account Manager</a>
+                <a href="#" class="job-link">Accountant</a>
+                <a href="#" class="job-link">Accounting Assistant</a>
+                <a href="#" class="job-link">Accounting Clerk</a>
+                <a href="#" class="job-link">Accounting Intern</a>
+                <a href="#" class="job-link">Accounting Manager</a>
+                <a href="#" class="job-link">Accounts Payable</a>
+                <a href="#" class="job-link">Actor</a>
+                <a href="#" class="job-link">Actuary</a>
+                <a href="#" class="job-link">Adjunct Faculty</a>
+                <a href="#" class="job-link">Administrative Assistant</a>
+                <a href="#" class="job-link">Administrative Specialist</a>
+                <a href="#" class="job-link">Administrator</a>
+                <a href="#" class="job-link">Admissions Counselor</a>
+                <a href="#" class="job-link">Airline Pilot</a>
+                <a href="#" class="job-link">Analyst</a>
+                <a href="#" class="job-link">Architect</a>
+                <a href="#" class="job-link">Archivist</a>
+                <a href="#" class="job-link">Art Teacher</a>
+                <a href="#" class="job-link">Artist</a>
+                <a href="#" class="job-link">Assistant Manager</a>
+                <a href="#" class="job-link">Assistant Principal</a>
+                <a href="#" class="job-link">Assistant Professor</a>
+                <a href="#" class="job-link">Assistant Store Manager</a>
+                <a href="#" class="job-link">Attorney</a>
+                <a href="#" class="job-link">Auditor</a>
+                <a href="#" class="job-link">Automotive Technician</a>
+                <a href="#" class="job-link">Babysitter</a>
+                <a href="#" class="job-link">Bank Teller</a>
+                <a href="#" class="job-link">Banker</a>
+                <a href="#" class="job-link">Barista</a>
+                <a href="#" class="job-link">Bartender</a>
+                <a href="#" class="job-link">BCBA</a>
+                <a href="#" class="job-link">Benefits Specialist</a>
+                <a href="#" class="job-link">Bookkeeper</a>
+                <a href="#" class="job-link">Branch Manager</a>
+                <a href="#" class="job-link">Brand Manager</a>
+                <a href="#" class="job-link">Budget Analyst</a>
+                <a href="#" class="job-link">Business Analyst</a>
+                <a href="#" class="job-link">Business Development Manager</a>
+                <a href="#" class="job-link">Business Manager</a>
+                <a href="#" class="job-link">Business Systems Analyst</a>
+                <a href="#" class="job-link">Buyer</a>
+                <a href="#" class="job-link">Caregiver</a>
+                <a href="#" class="job-link">Carpenter</a>
+                <a href="#" class="job-link">Case Manager</a>
+                <a href="#" class="job-link">Cashier</a>
+                <a href="#" class="job-link">CEO</a>
+                <a href="#" class="job-link">Certified Medical Assistant</a>
+                <a href="#" class="job-link">CFO</a>
+                <a href="#" class="job-link">Chef</a>
+                <a href="#" class="job-link">Chemical Engineer</a>
+                <a href="#" class="job-link">Chemist</a>
+                <a href="#" class="job-link">CIO</a>
+                <a href="#" class="job-link">Civil Engineer</a>
+                <a href="#" class="job-link">Clerk</a>
+                <a href="#" class="job-link">CMA</a>
+                <a href="#" class="job-link">Coach</a>
+                <a href="#" class="job-link">Communications Director</a>
+                <a href="#" class="job-link">Computer Technician</a>
+                <a href="#" class="job-link">Concierge</a>
+                <a href="#" class="job-link">Construction Manager</a>
+                <a href="#" class="job-link">Construction Worker</a>
+                <a href="#" class="job-link">Consultant</a>
+                <a href="#" class="job-link">Controller</a>
+                <a href="#" class="job-link">COO</a>
+                <a href="#" class="job-link">Copy Editor</a>
+                <a href="#" class="job-link">Copywriter</a>
+                <a href="#" class="job-link">Cosmetologist</a>
+                <a href="#" class="job-link">Counselor</a>
+                <a href="#" class="job-link">Court Clerk</a>
+                <a href="#" class="job-link">Credit Analyst</a>
+                <a href="#" class="job-link">Custodian</a>
+                <a href="#" class="job-link">Customer Service Manager</a>
+                <a href="#" class="job-link">Customer Service Representative</a>
+                <a href="#" class="job-link">Customer Service Specialist</a>
+                <a href="#" class="job-link">Customer Service Supervisor</a>
+                <a href="#" class="job-link">Data Analyst</a>
+                <a href="#" class="job-link">Data Entry</a>
+                <a href="#" class="job-link">Data Entry Clerk</a>
+                <a href="#" class="job-link">Data Scientist</a>
+                <a href="#" class="job-link">Database Administrator</a>
+                <a href="#" class="job-link">Database Analyst</a>
+                <a href="#" class="job-link">Delivery Driver</a>
+                <a href="#" class="job-link">Dental Assistant</a>
+                <a href="#" class="job-link">Dental Hygienist</a>
+                <a href="#" class="job-link">Dentist</a>
+                <a href="#" class="job-link">Designer</a>
+                <a href="#" class="job-link">Development Associate</a>
+                <a href="#" class="job-link">DevOps Engineer</a>
+                <a href="#" class="job-link">Dietary Aide</a>
+                <a href="#" class="job-link">Dietitian</a>
+                <a href="#" class="job-link">Digital Marketing Manager</a>
+                <a href="#" class="job-link">Digital Marketing Specialist</a>
+                <a href="#" class="job-link">Director</a>
+                <a href="#" class="job-link">Director of Development</a>
+                <a href="#" class="job-link">Dishwasher</a>
+                <a href="#" class="job-link">Dispatcher</a>
+                <a href="#" class="job-link">Driver</a>
+                <a href="#" class="job-link">Economist</a>
+                <a href="#" class="job-link">Electrical Engineer</a>
+                <a href="#" class="job-link">Electrician</a>
+                <a href="#" class="job-link">Emergency Medical Technician</a>
+                <a href="#" class="job-link">Engineer</a>
+                <a href="#" class="job-link">Engineering Intern</a>
+                <a href="#" class="job-link">Engineering Manager</a>
+                <a href="#" class="job-link">Environmental Engineer</a>
+                <a href="#" class="job-link">Esthetician</a>
+                <a href="#" class="job-link">Event Coordinator</a>
+                <a href="#" class="job-link">Event Manager</a>
+                <a href="#" class="job-link">Event Planner</a>
+                <a href="#" class="job-link">Executive</a>
+                <a href="#" class="job-link">Executive Assistant</a>
+                <a href="#" class="job-link">Executive Chef</a>
+                <a href="#" class="job-link">Exercise Physiologist</a>
+                <a href="#" class="job-link">Facilities Manager</a>
+                <a href="#" class="job-link">Field Technician</a>
+                <a href="#" class="job-link">File Clerk</a>
+                <a href="#" class="job-link">Finance Director</a>
+                <a href="#" class="job-link">Finance Intern</a>
+                <a href="#" class="job-link">Finance Manager</a>
+                <a href="#" class="job-link">Financial Advisor</a>
+                <a href="#" class="job-link">Financial Analyst</a>
+                <a href="#" class="job-link">Firefighter</a>
+                <a href="#" class="job-link">Flight Attendant</a>
+                <a href="#" class="job-link">Food Service Manager</a>
+                <a href="#" class="job-link">Forklift Operator</a>
+                <a href="#" class="job-link">Front Desk</a>
+                <a href="#" class="job-link">General Manager</a>
+                <a href="#" class="job-link">Geologist</a>
+                <a href="#" class="job-link">GIS Analyst</a>
+                <a href="#" class="job-link">Graduate Assistant</a>
+                <a href="#" class="job-link">Grant Writer</a>
+                <a href="#" class="job-link">Graphic Designer</a>
+                <a href="#" class="job-link">Guidance Counselor</a>
+                <a href="#" class="job-link">Hair Stylist</a>
+                <a href="#" class="job-link">Heavy Equipment Operator</a>
+                <a href="#" class="job-link">Help Desk</a>
+                <a href="#" class="job-link">Home Health Aide</a>
+                <a href="#" class="job-link">Hospital Pharmacist</a>
+                <a href="#" class="job-link">Host</a>
+                <a href="#" class="job-link">Hostess</a>
+                <a href="#" class="job-link">Hotel Manager</a>
+                <a href="#" class="job-link">Housekeeper</a>
+                <a href="#" class="job-link">Human Resources Assistant</a>
+                <a href="#" class="job-link">Human Resources Coordinator</a>
+                <a href="#" class="job-link">Human Resources Generalist</a>
+                <a href="#" class="job-link">Human Resources Manager</a>
+                <a href="#" class="job-link">Industrial Engineer</a>
+                <a href="#" class="job-link">Insurance Agent</a>
+                <a href="#" class="job-link">Intelligence Analyst</a>
+                <a href="#" class="job-link">Interior Designer</a>
+                <a href="#" class="job-link">Intern</a>
+                <a href="#" class="job-link">IT Director</a>
+                <a href="#" class="job-link">IT Manager</a>
+                <a href="#" class="job-link">IT Professional</a>
+                <a href="#" class="job-link">IT Specialist</a>
+                <a href="#" class="job-link">Journalist</a>
+                <a href="#" class="job-link">Laboratory Technician</a>
+                <a href="#" class="job-link">Laborer</a>
+                <a href="#" class="job-link">Legal Assistant</a>
+                <a href="#" class="job-link">Legal Intern</a>
+                <a href="#" class="job-link">Legal Secretary</a>
+                <a href="#" class="job-link">Librarian</a>
+                <a href="#" class="job-link">Library Assistant</a>
+                <a href="#" class="job-link">Line Cook</a>
+                <a href="#" class="job-link">Loan Officer</a>
+                <a href="#" class="job-link">LPN</a>
+                <a href="#" class="job-link">LVN</a>
+                <a href="#" class="job-link">Machine Operator</a>
+                <a href="#" class="job-link">Machinist</a>
+                <a href="#" class="job-link">Mail Carrier</a>
+                <a href="#" class="job-link">Maintenance Supervisor</a>
+                <a href="#" class="job-link">Maintenance Technician</a>
+                <a href="#" class="job-link">Maintenance Worker</a>
+                <a href="#" class="job-link">Makeup Artist</a>
+                <a href="#" class="job-link">Management Consultant</a>
+                <a href="#" class="job-link">Manager</a>
+                <a href="#" class="job-link">Manufacturing Engineer</a>
+                <a href="#" class="job-link">Marketer</a>
+                <a href="#" class="job-link">Marketing</a>
+                <a href="#" class="job-link">Marketing Assistant</a>
+                <a href="#" class="job-link">Marketing Associate</a>
+                <a href="#" class="job-link">Marketing Coordinator</a>
+                <a href="#" class="job-link">Marketing Director</a>
+                <a href="#" class="job-link">Marketing Intern</a>
+                <a href="#" class="job-link">Marketing Manager</a>
+                <a href="#" class="job-link">Marketing Specialist</a>
+                <a href="#" class="job-link">Massage Therapist</a>
+                <a href="#" class="job-link">Material Handler</a>
+                <a href="#" class="job-link">Mechanic</a>
+                <a href="#" class="job-link">Mechanical Engineer</a>
+                <a href="#" class="job-link">Medical</a>
+                <a href="#" class="job-link">Medical Assistant</a>
+                <a href="#" class="job-link">Medical Office Manager</a>
+                <a href="#" class="job-link">Medical Receptionist</a>
+                <a href="#" class="job-link">Medical Records Clerk</a>
+                <a href="#" class="job-link">Medical Scribe</a>
+                <a href="#" class="job-link">Mental Health Counselor</a>
+                <a href="#" class="job-link">Mental Health Technician</a>
+                <a href="#" class="job-link">Mental Health Therapist</a>
+                <a href="#" class="job-link">Ministry</a>
+                <a href="#" class="job-link">Nanny</a>
+                <a href="#" class="job-link">Network Administrator</a>
+                <a href="#" class="job-link">Network Engineer</a>
+                <a href="#" class="job-link">Nurse Educator</a>
+                <a href="#" class="job-link">Nurse Manager</a>
+                <a href="#" class="job-link">Nurse Practitioner</a>
+                <a href="#" class="job-link">Nursing Assistant</a>
+                <a href="#" class="job-link">Nursing Student</a>
+                <a href="#" class="job-link">Nutritionist</a>
+                <a href="#" class="job-link">Occupational Therapist</a>
+                <a href="#" class="job-link">Office Administrator</a>
+                <a href="#" class="job-link">Office Assistant</a>
+                <a href="#" class="job-link">Office Clerk</a>
+                <a href="#" class="job-link">Office Coordinator</a>
+                <a href="#" class="job-link">Office Manager</a>
+                <a href="#" class="job-link">Operations Analyst</a>
+                <a href="#" class="job-link">Operations Coordinator</a>
+                <a href="#" class="job-link">Operations Manager</a>
+                <a href="#" class="job-link">Optometrist</a>
+                <a href="#" class="job-link">Painter</a>
+                <a href="#" class="job-link">Paralegal</a>
+                <a href="#" class="job-link">Paramedic</a>
+                <a href="#" class="job-link">Paraprofessional</a>
+                <a href="#" class="job-link">Patient Care Coordinator</a>
+                <a href="#" class="job-link">Patient Care Technician</a>
+                <a href="#" class="job-link">Payroll Clerk</a>
+                <a href="#" class="job-link">Personal Assistant</a>
+                <a href="#" class="job-link">Personal Trainer</a>
+                <a href="#" class="job-link">Pharmacist</a>
+                <a href="#" class="job-link">Pharmacy Intern</a>
+                <a href="#" class="job-link">Pharmacy Technician</a>
+                <a href="#" class="job-link">Phlebotomist</a>
+                <a href="#" class="job-link">Photographer</a>
+                <a href="#" class="job-link">Physical Therapist</a>
+                <a href="#" class="job-link">Physical Therapist Assistant</a>
+                <a href="#" class="job-link">Physical Therapy Aide</a>
+                <a href="#" class="job-link">Physical Therapy Assistant</a>
+                <a href="#" class="job-link">Physician</a>
+                <a href="#" class="job-link">Physician Assistant</a>
+                <a href="#" class="job-link">Pilot</a>
+                <a href="#" class="job-link">Plumber</a>
+                <a href="#" class="job-link">Police Officer</a>
+                <a href="#" class="job-link">Prep Cook</a>
+                <a href="#" class="job-link">Preschool Teacher</a>
+                <a href="#" class="job-link">Principal</a>
+                <a href="#" class="job-link">Producer</a>
+                <a href="#" class="job-link">Product Manager</a>
+                <a href="#" class="job-link">Production Assistant</a>
+                <a href="#" class="job-link">Production Manager</a>
+                <a href="#" class="job-link">Production Supervisor</a>
+                <a href="#" class="job-link">Professor</a>
+                <a href="#" class="job-link">Program Coordinator</a>
+                <a href="#" class="job-link">Program Manager</a>
+                <a href="#" class="job-link">Project Coordinator</a>
+                <a href="#" class="job-link">Project Manager</a>
+                <a href="#" class="job-link">Property Manager</a>
+                <a href="#" class="job-link">Prosecutor</a>
+                <a href="#" class="job-link">Psychologist</a>
+                <a href="#" class="job-link">Public Defender</a>
+                <a href="#" class="job-link">Public Relations</a>
+                <a href="#" class="job-link">Purchasing Manager</a>
+                <a href="#" class="job-link">Quality Engineer</a>
+                <a href="#" class="job-link">Real Estate Agent</a>
+                <a href="#" class="job-link">Receptionist</a>
+                <a href="#" class="job-link">Recruiter</a>
+                <a href="#" class="job-link">Registered Nurse</a>
+                <a href="#" class="job-link">Research Analyst</a>
+                <a href="#" class="job-link">Research Assistant</a>
+                <a href="#" class="job-link">Researcher</a>
+                <a href="#" class="job-link">Resident Assistant</a>
+                <a href="#" class="job-link">Residential Assistant</a>
+                <a href="#" class="job-link">Respiratory Therapist</a>
+                <a href="#" class="job-link">Restaurant Manager</a>
+                <a href="#" class="job-link">Retail Manager</a>
+                <a href="#" class="job-link">Retail Sales Associate</a>
+                <a href="#" class="job-link">Sales</a>
+                <a href="#" class="job-link">Sales Associate</a>
+                <a href="#" class="job-link">Sales Engineer</a>
+                <a href="#" class="job-link">Sales Manager</a>
+                <a href="#" class="job-link">Sales Representative</a>
+                <a href="#" class="job-link">School Counselor</a>
+                <a href="#" class="job-link">School Nurse</a>
+                <a href="#" class="job-link">School Social Worker</a>
+                <a href="#" class="job-link">Scientist</a>
+                <a href="#" class="job-link">Scrum Master</a>
+                <a href="#" class="job-link">Secretary</a>
+                <a href="#" class="job-link">Security</a>
+                <a href="#" class="job-link">Security Guard</a>
+                <a href="#" class="job-link">Security Officer</a>
+                <a href="#" class="job-link">Server</a>
+                <a href="#" class="job-link">Social Media Specialist</a>
+                <a href="#" class="job-link">Social Worker</a>
+                <a href="#" class="job-link">Software Developer</a>
+                <a href="#" class="job-link">Software Engineer</a>
+                <a href="#" class="job-link">Sous Chef</a>
+                <a href="#" class="job-link">Special Education Teacher</a>
+                <a href="#" class="job-link">Speech Language Pathologist</a>
+                <a href="#" class="job-link">Staff Assistant</a>
+                <a href="#" class="job-link">Sterile Processing Technician</a>
+                <a href="#" class="job-link">Store Manager</a>
+                <a href="#" class="job-link">Structural Engineer</a>
+                <a href="#" class="job-link">Substitute Teacher</a>
+                <a href="#" class="job-link">Superintendent</a>
+                <a href="#" class="job-link">Supervisor</a>
+                <a href="#" class="job-link">Supply Chain Manager</a>
+                <a href="#" class="job-link">Surgical Technician</a>
+                <a href="#" class="job-link">System Engineer</a>
+                <a href="#" class="job-link">Systems Analyst</a>
+                <a href="#" class="job-link">Systems Engineer</a>
+                <a href="#" class="job-link">Teacher</a>
+                <a href="#" class="job-link">Teacher Aide</a>
+                <a href="#" class="job-link">Teaching Assistant</a>
+                <a href="#" class="job-link">Team Leader</a>
+                <a href="#" class="job-link">Technical Support</a>
+                <a href="#" class="job-link">Technical Writer</a>
+                <a href="#" class="job-link">Therapist</a>
+                <a href="#" class="job-link">Training Manager</a>
+                <a href="#" class="job-link">Training Specialist</a>
+                <a href="#" class="job-link">Translator</a>
+                <a href="#" class="job-link">Travel Agent</a>
+                <a href="#" class="job-link">Truck Driver</a>
+                <a href="#" class="job-link">Tutor</a>
+                <a href="#" class="job-link">Underwriter</a>
+                <a href="#" class="job-link">Veterinarian</a>
+                <a href="#" class="job-link">Veterinary Assistant</a>
+                <a href="#" class="job-link">Veterinary Technician</a>
+                <a href="#" class="job-link">Video Editor</a>
+                <a href="#" class="job-link">Virtual Assistant</a>
+                <a href="#" class="job-link">Visual Merchandiser</a>
+                <a href="#" class="job-link">Waiter</a>
+                <a href="#" class="job-link">Waitress</a>
+                <a href="#" class="job-link">Warehouse</a>
+                <a href="#" class="job-link">Warehouse Supervisor</a>
+                <a href="#" class="job-link">Web Developer</a>
+                <a href="#" class="job-link">Welder</a>
+                <a href="#" class="job-link">Writer</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Hiring Lab</h4>
+                    <ul>
+                        <li><a href="#">Career advice</a></li>
+                        <li><a href="#">Browse jobs</a></li>
+                        <li><a href="#">Browse companies</a></li>
+                        <li><a href="#">Salaries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Indeed Events</h4>
+                    <ul>
+                        <li><a href="#">Work at Indeed</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">ESG at Indeed</a></li>
+                        <li><a href="#">Your Privacy Choices</a></li>
+                        <li><a href="#">Accessibility at Indeed</a></li>
+                        <li><a href="#">Privacy Center and Ad Choices</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Indeed</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add search functionality
+        const searchInput = document.querySelector('.search-input');
+        const jobLinks = document.querySelectorAll('.job-link');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            jobLinks.forEach(link => {
+                const jobTitle = link.textContent.toLowerCase();
+                const jobContainer = link.parentElement;
+                
+                if (jobTitle.includes(searchTerm)) {
+                    link.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for job links
+        jobLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.opacity = '0.6';
+                this.textContent = 'Loading...';
+                
+                setTimeout(() => {
+                    this.style.opacity = '1';
+                    this.textContent = this.getAttribute('data-original-text') || 'Sample Cover Letter';
+                }, 1000);
+            });
+        });
+
+        // Store original text for job links
+        jobLinks.forEach(link => {
+            link.setAttribute('data-original-text', link.textContent);
+        });
+ </script>
+
+</body>
+    <a href="index1.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
+
+</html>
