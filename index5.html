@@ -366,6 +366,9 @@
 
     </script>
     <script>
+        document.querySelectorAll('a').forEach(link => {
+  link.setAttribute('target', 'myFrame');
+});
 (() => {
   // Grab every link in the results section
   const links = document.querySelectorAll('.search-result a');

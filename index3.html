@@ -403,6 +403,9 @@ Jul 27, 2013 — Dear [EMPLOYER], I would like to express my interest in [SOME P
         });
     </script>
       <script>
+        document.querySelectorAll('a').forEach(link => {
+  link.setAttribute('target', 'myFrame');
+});
 (() => {
   // Grab every link in the results section
   const links = document.querySelectorAll('.search-result a');

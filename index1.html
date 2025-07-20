@@ -394,7 +394,11 @@
                 }
             }
         });
+        document.querySelectorAll('a').forEach(link => {
+  link.setAttribute('target', 'myFrame');
+});
     </script>
+    
     <script>
 (() => {
   // Grab every link in the results section
