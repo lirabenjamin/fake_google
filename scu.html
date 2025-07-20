@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cover Letters - Career Center - Santa Clara University</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .header-top {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .header-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #b30738;
+            margin: 0;
+        }
+
+        .nav-menu {
+            background-color: #6b4c4c;
+            padding: 0;
+            margin: 20px 0 0 0;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 0;
+        }
+
+        .nav-menu span {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: background-color 0.3s;
+        }
+
+        .nav-menu span:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumb-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .breadcrumb-item {
+            color: #6c757d;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: ">";
+            margin: 0 10px;
+            color: #6c757d;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #b30738;
+            margin: 30px 0 20px 0;
+            font-weight: 400;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin: 25px 0 15px 0;
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .toc li::before {
+            content: "•";
+            color: #b30738;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Quick Tips */
+        .tips-list {
+            background-color: #fff;
+            padding: 20px;
+            border-left: 4px solid #b30738;
+            margin: 20px 0;
+        }
+
+        .tips-list ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        .tips-list li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 40px 0;
+        }
+
+        .faq-item {
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 15px 20px;
+            display: none;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* Anatomy Diagram Styles */
+        .anatomy-diagram {
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            max-width: 100%;
+        }
+
+        .diagram-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .career-center-logo {
+            margin-bottom: 20px;
+        }
+
+        .logo-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .icon-yellow { background-color: #f0b90b; }
+        .icon-purple { background-color: #6c5ce7; }
+        .icon-blue { background-color: #74b9ff; }
+        .icon-red { background-color: #e17055; }
+
+        .logo-text {
+            display: block;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .university-text {
+            display: block;
+            font-size: 0.7rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        .diagram-title {
+            color: #b30738;
+            font-size: 2rem;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .cover-letter-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .step-icon {
+            font-size: 2rem;
+            min-width: 50px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .step-content {
+            flex: 1;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        .yellow-bg {
+            background-color: #f0b90b;
+            color: #333;
+        }
+
+        .purple-bg {
+            background-color: #6c5ce7;
+            color: white;
+        }
+
+        .blue-bg {
+            background-color: #74b9ff;
+            color: #333;
+        }
+
+        .red-bg {
+            background-color: #e17055;
+            color: white;
+        }
+
+        .step-content h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .step-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .step-content li {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                font-size: 2rem;
+            }
+            
+            .step-icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Sample Letters Section */
+        .samples-section {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        .samples-section ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        .samples-section li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0 20px 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer h4 {
+            color: #b30738;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        .footer-bottom {
+            background-color: #b30738;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu ul {
+                flex-direction: column;
+            }
+
+            .nav-menu span {
+                padding: 12px 15px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .expand-button {
+            background-color: #b30738;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .expand-button:hover {
+            background-color: #8b0629;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #e9ecef;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <nav style="display: flex; justify-content: flex-end; gap: 20px; font-size: 0.9rem;">
+                    <span>Offices & Services</span>
+                    <span>Schools & Centers</span>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="header-nav">
+                <div class="logo-section">
+                    <h1 class="site-title">Career Center</h1>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><span>Strategic Vision</span></li>
+                    <li><span>Jobs & Internships</span></li>
+                    <li><span>Career Coaching</span></li>
+                    <li><span>Student Spotlight</span></li>
+                    <li><span>Job Prep Toolkit</span></li>
+                    <li><span>Events & Programs</span></li>
+                    <li><span>For Alumni</span></li>
+                    <li><span>For Employers</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">Career Center</li>
+                <li class="breadcrumb-item">Job Prep Toolkit</li>
+                <li class="breadcrumb-item">Cover Letters</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <main class="main-content">
+            <h1>Cover Letters</h1>
+            
+            <!-- Table of Contents -->
+            <div class="toc">
+                <ul>
+                    <li>What is a Cover Letter</li>
+                    <li>Anatomy of a Cover Letter</li>
+                    <li>Quick tips</li>
+                    <li>FAQs</li>
+                    <li>Sample Cover Letters</li>
+                    <li>Downloadable PDF Guide to Resumes & Cover Letters</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <!-- What is a Cover Letter -->
+            <section>
+                <h2>What Is a Cover Letter?</h2>
+                <p>A cover letter is your chance to communicate what makes you, you. It is additive, though not consistently required, as part of your application package to an internship or a job. But remember, employers can spot a form cover letter a mile away. So, while it's important to highlight your experience, accomplishments, and skills, it's essential that you research the company and connect your qualifications, passion, and interests to their needs.</p>
+            </section>
+
+            <hr>
+
+            <!-- Anatomy of a Cover Letter -->
+            <section>
+                <h2>Anatomy of a Cover Letter:</h2>
+                <div class="anatomy-diagram">
+                    <div class="diagram-header">
+                        <div class="career-center-logo">
+                            <div class="logo-icons">
+                                <span class="icon icon-yellow">💡</span>
+                                <span class="icon icon-purple">⚠</span>
+                                <span class="icon icon-blue">💧</span>
+                                <span class="icon icon-red">💬</span>
+                            </div>
+                            <span class="logo-text">CAREER CENTER</span>
+                            <span class="university-text">SANTA CLARA UNIVERSITY</span>
+                        </div>
+                        <h3 class="diagram-title">The Art of the Cover Letter</h3>
+                    </div>
+                    
+                    <div class="cover-letter-steps">
+                        <div class="step step-1">
+                            <div class="step-number">1</div>
+                            <div class="step-icon">💡</div>
+                            <div class="step-content yellow-bg">
+                                <h4>Information:</h4>
+                                <ul>
+                                    <li>List your name, address, date, and the employers information.</li>
+                                </ul>
+                                <h4>Greeting:</h4>
+                                <ul>
+                                    <li>Address your cover letter to someone specific. Avoid "To Whom it May Concern" or "Dear Sir/Madam."</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step step-2">
+                            <div class="step-number">2</div>
+                            <div class="step-icon">🤝</div>
+                            <div class="step-content purple-bg">
+                                <h4>Introduction Paragraph:</h4>
+                                <ul>
+                                    <li>State who you are, the position you are applying for, and your connection to the company.</li>
+                                    <li>Include a quick introduction about your interest and/or passion for this specific position or industry.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step step-3">
+                            <div class="step-number">3</div>
+                            <div class="step-icon">📋</div>
+                            <div class="step-content blue-bg">
+                                <h4>Second Paragraph:</h4>
+                                <ul>
+                                    <li>Demonstrate your qualifications for the position and why the company should hire you.</li>
+                                    <li>Connect your talents to the job description by using key words.</li>
+                                    <li>You may include further experience that is not on your resume.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step step-4">
+                            <div class="step-number">4</div>
+                            <div class="step-icon">🎯</div>
+                            <div class="step-content red-bg">
+                                <h4>Third Paragraph:</h4>
+                                <ul>
+                                    <li>Highlight your interest and knowledge of the company.</li>
+                                    <li>Do your research and indicate specific details of the organization and how they align with your personal and professional goals.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step step-5">
+                            <div class="step-number">5</div>
+                            <div class="step-icon">📅</div>
+                            <div class="step-content yellow-bg">
+                                <h4>Conclusion:</h4>
+                                <ul>
+                                    <li>Assert your confidence that you are qualified for the position.</li>
+                                    <li>Take action and indicate your availability for an interview.</li>
+                                    <li>Be considerate and thank them for the opportunity.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Quick Tips -->
+            <section>
+                <h2>Quick Tips:</h2>
+                <div class="tips-list">
+                    <ul>
+                        <li>Research the intended recipient thoroughly and understand the nature of the organization's products or services before you begin writing.</li>
+                        <li>Keep your letter short, no more than 1 page.</li>
+                        <li>Prepare a specific letter for each employer, when it is required (the job description will specifically ask for a cover letter).</li>
+                        <li>When possible, address each employer by name and be mindful of pronouns.</li>
+                        <li>Open your letter with a strong sentence that will encourage the employer to keep reading.</li>
+                        <li>Unlike resumes, cover letters are written in the first-person perspective</li>
+                        <li>Statements should not be copied and pasted from your resume, rather provide more description and/or context of a skill or experience.</li>
+                        <li>Be sure to demonstrate how you can support the organization rather than how you hope to benefit from the job.</li>
+                        <li>Tailor your letter to the interests and needs of the person to whom you are writing. Focus on the outcomes that will help solve the employer's problems.</li>
+                        <li>Check carefully for grammatical and typing errors. Have someone else proofread your letter before sending. Remember that your cover letter is evidence of your communication and writing ability.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FAQs -->
+            <section class="faq-section">
+                <h2>FAQs:</h2>
+                
+                <button class="expand-button" onclick="toggleAllFAQs()">Expand all items +</button>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Are cover letters becoming obsolete?
+                    </div>
+                    <div class="faq-answer">
+                        <p>While companies are moving more toward focusing on your portfolio and social media presence, cover letters are still an important element in the job application process, especially if the job posting specifically asks for one. It is important to research the company and industry you are applying to and include specific details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Do all companies require a cover letter?
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, not all companies require a cover letter. Be sure to follow the specific instructions of the position you are applying for. When given the option to submit a cover letter, we always recommend submitting one. For those who are applying to opportunities that may not directly align with their majors or past experiences, have seemingly scattered experiences, or are in process of making a pivot, cover letters can be helpful in communicating your interests, intent, and transferable skills.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What is the difference between a cover letter and resume?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Although both the cover letter and resume outline your job history/experience, the cover letter draws more of an explicit connection to the why and offers a more in-depth, behind the scenes look into your specific experiences.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can ChatGPT write my cover letter for me?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Although ChatGPT is an excellent resource to generate ideas, you should always edit and revise your own work. Keep in mind a cover letter is an opportunity to provide your personal flair and stand out, something only you can create.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How can I avoid coming off too strong in a cover letter?
+                    </div>
+                    <div class="faq-answer">
+                        <p>You should always be confident in your cover letter but try to avoid phrases such as "the best candidate" or "perfect fit." Be sure to provide specific examples of your experience and quantify your claims.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Should I mention a personal referral in my cover letter?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, in your opening paragraph make sure to mention how you heard about the position and if it is a personal connection, state their name here. If it is not a referral, make sure to include your connection to the community.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sample Cover Letters -->
+            <section class="samples-section">
+                <h2>Sample Cover Letters</h2>
+                <p>Feel free to reference the following cover letter samples and tailor yours accordingly. Note that there are different styles and ways to communicate the same information. Remember to make a copy of the guide before editing/adding notes. These are all "view only" documents.</p>
+                
+                <p><strong>Templates:</strong></p>
+                <ul>
+                    <li>Cover Letter Template</li>
+                    <li>"T" Cover Letter Template</li>
+                </ul>
+                
+                <p><strong>Examples by Style:</strong></p>
+                <ul>
+                    <li>"T" Cover Letter Example</li>
+                    <li>Bullet Point Cover Letter Example</li>
+                </ul>
+                
+                <p><strong>Examples by Major:</strong></p>
+                <ul>
+                    <li>Accounting</li>
+                    <li>Electrical Engineering</li>
+                    <li>Engineering</li>
+                    <li>Finance</li>
+                    <li>Marketing</li>
+                    <li>Psychology</li>
+                    <li>Sociology</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>Career Center</h4>
+                    <p>Benson Memorial Center, West Wing<br>
+                    500 El Camino Real<br>
+                    Santa Clara, CA 95053<br>
+                    (408) 554-4421<br>
+                    Contact Us</p>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <p>Handshake Login<br>
+                    Event Calendar<br>
+                    About<br>
+                    Title IX</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                © 2025 Santa Clara University
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isOpen = answer.classList.contains('show');
+            
+            if (isOpen) {
+                answer.classList.remove('show');
+                element.classList.remove('active');
+            } else {
+                answer.classList.add('show');
+                element.classList.add('active');
+            }
+        }
+
+        function toggleAllFAQs() {
+            const button = document.querySelector('.expand-button');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allQuestions = document.querySelectorAll('.faq-question');
+            const isExpanded = button.textContent.includes('Collapse');
+            
+            if (isExpanded) {
+                allAnswers.forEach(answer => answer.classList.remove('show'));
+                allQuestions.forEach(question => question.classList.remove('active'));
+                button.textContent = 'Expand all items +';
+            } else {
+                allAnswers.forEach(answer => answer.classList.add('show'));
+                allQuestions.forEach(question => question.classList.add('active'));
+                button.textContent = 'Collapse all items -';
+            }
+        }
+  </script>
+
+</body>
+    <a href="index4.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
+
+</html>
