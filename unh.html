@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="UNH's Career and Professional Success has best practices for cover letters available to all students and alumni. CaPS works closely with the top employers in the country to cultivate the best industry standards for cover letters." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cover Letters | Career and Professional Success</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .visually-hidden {
+            position: absolute !important;
+            clip: rect(1px, 1px, 1px, 1px);
+            overflow: hidden;
+            height: 1px;
+            width: 1px;
+            word-wrap: normal;
+        }
+
+        .focusable:focus {
+            position: static;
+            clip: auto;
+            overflow: visible;
+            height: auto;
+            width: auto;
+        }
+
+        /* UNH Header */
+        .unh-header {
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .unh-header__logo svg {
+            height: 60px;
+            width: auto;
+        }
+
+        .branding__site-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Header Main */
+        .header {
+            background-color: #0056b3;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header .container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__site-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .header__site-name a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header__pipe {
+            width: 2px;
+            height: 30px;
+            background-color: rgba(255,255,255,0.3);
+            margin: 0 1rem;
+        }
+
+        /* Navigation */
+        .sf-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sf-menu li {
+            position: relative;
+            margin-right: 2rem;
+        }
+
+        .sf-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            display: block;
+            font-weight: 400;
+        }
+
+        .sf-menu a:hover {
+            color: #87ceeb;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+
+        .breadcrumb-item {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: " / ";
+            margin: 0 0.5rem;
+            color: #adb5bd;
+        }
+
+        .breadcrumb-item a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: #495057;
+        }
+
+        /* Main Layout */
+        .layout-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .layout-sidebar-first {
+            flex: 0 0 250px;
+        }
+
+        .layout-content {
+            flex: 1;
+        }
+
+        /* Sidebar */
+        .sidemenu {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sidemenu h2 {
+            background-color: #0056b3;
+            color: white;
+            padding: 1rem;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .sidemenu h2 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidemenu .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidemenu .menu-level-0 > .menu-item {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .sidemenu .menu-item a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #495057;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .sidemenu .menu-item a:hover {
+            background-color: #e9ecef;
+            color: #0056b3;
+        }
+
+        .sidemenu .menu-item--active-trail > a,
+        .sidemenu .menu-item a.is-active {
+            background-color: #0056b3;
+            color: white;
+            font-weight: 600;
+        }
+
+        .sidemenu .menu-level-1 {
+            background-color: #fff;
+        }
+
+        .sidemenu .menu-level-1 .menu-item a {
+            padding-left: 2rem;
+            font-size: 0.85rem;
+        }
+
+        .sidemenu .menu-level-2 .menu-item a {
+            padding-left: 3rem;
+            font-size: 0.8rem;
+        }
+
+        /* Main Content */
+        .layout-content h1 {
+            color: #003366;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Paragraph Content */
+        .field__item p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .field__item strong {
+            font-weight: 600;
+            color: #003366;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #003d82;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        /* Layout Sections */
+        .para__layout__two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .para__bg--gray-200 {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0056b3;
+        }
+
+        .para__padding--top-small {
+            padding-top: 1rem;
+        }
+
+        /* Section Headers */
+        .h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* FontAwesome Icons */
+        .fontawesome-icon-inline {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .fa-paste::before { content: "📋"; }
+        .fa-play::before { content: "🚀"; }
+        .fa-paragraph::before { content: "📝"; }
+        .fa-stop::before { content: "✅"; }
+
+        /* Lists */
+        ul {
+            margin: 0 0 1rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #003366;
+            color: white;
+            margin-top: 4rem;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer__main .container-fluid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer h2, .footer .h2 {
+            color: #87ceeb;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer .text-uppercase {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer hr {
+            border: none;
+            height: 2px;
+            background-color: #0056b3;
+            width: 25%;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .footer .list-unstyled {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer .list-unstyled li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: #87ceeb;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer .list-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .footer .list-inline-item {
+            font-size: 0.85rem;
+        }
+
+        .footer .font-size-20 {
+            font-size: 1.25rem;
+        }
+
+        .footer .font-size-20 a {
+            margin-right: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .layout-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .layout-sidebar-first {
+                flex: none;
+            }
+
+            .para__layout__two-column {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .header .container-fluid {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .header__pipe {
+                display: none;
+            }
+
+            .sf-menu {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .sf-menu li {
+                margin: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+            }
+
+            .footer__main .container-fluid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .layout-content h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Mobile sidebar toggle */
+        .btn-arrow {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .btn-arrow {
+                display: block;
+                background-color: #6c757d;
+                color: white;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="visually-hidden focusable">Skip to main content</a>
+    
+    <div class="dialog-off-canvas-main-canvas">
+        <header class="header-main">
+            <div class="unh-header" role="banner">
+                <div class="region-branding-logo-wrapper unh-header__logo">
+                    <aside class="branding">
+                        <div class="branding__site-logo">
+                            <span title="University of New Hampshire">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 95" aria-labelledby="University of New Hampshire logo" title="University of New Hampshire Logo" role="img">
+                                    <style type="text/css">.st0{fill:#FFFFFF;}</style>
+                                    <g>
+                                        <g>
+                                            <path class="st0" d="M78.81,87.51c0,3.31-2.6,5.91-5.98,5.91c-3.35,0-6.02-2.6-6.02-5.91c0-3.24,2.67-5.84,6.02-5.84C76.21,81.67,78.81,84.27,78.81,87.51z M68.3,87.51c0,2.6,1.92,4.66,4.56,4.66c2.56,0,4.45-2.07,4.45-4.63c0-2.6-1.89-4.7-4.49-4.7S68.3,84.95,68.3,87.51z M71.9,90.57h-1.35v-5.84c0.53-0.11,1.28-0.18,2.24-0.18c1.1,0,1.6,0.18,2.03,0.43c0.32,0.25,0.57,0.71,0.57,1.28c0,0.64-0.5,1.14-1.21,1.35v0.07c0.57,0.21,0.89,0.64,1.07,1.42c0.18,0.89,0.29,1.25,0.43,1.46h-1.46c-0.18-0.21-0.29-0.75-0.46-1.42c-0.11-0.64-0.46-0.93-1.21-0.93H71.9V90.57z M71.94,87.26h0.64c0.75,0,1.35-0.25,1.35-0.85c0-0.54-0.39-0.89-1.25-0.89c-0.36,0-0.61,0.04-0.75,0.07V87.26z"/>
+                                        </g>
+                                        <g>
+                                            <path class="st0" d="M2.5,1.58v45.35c-0.01,11.87,3.28,21.36,10.06,29C18,82.05,26.03,89.55,39.98,93.24l0.67,0.18l0.68-0.18c13.94-3.7,21.98-11.2,27.42-17.32c6.78-7.63,10.07-17.12,10.06-29V1.58H2.5z M76.18,46.93c0.01,11.21-3.07,20.12-9.4,27.25C61.52,80.09,53.85,87.2,40.65,90.7c-13.19-3.5-20.87-10.61-26.12-16.53c-6.33-7.13-9.41-16.04-9.4-27.25V4.21h71.04V46.93z"/>
+                                            <path class="st0" d="M27.96,22.8l5.43,15.83h0.1V22.8h7.17V12.34H13.26v34.59c-0.01,9.25,2.33,16.19,7.35,21.84c4.45,5.01,10.28,10.4,20.04,13.47v-23.7h-7.77l-5.67-18.52h-0.1v18.52h-7.17V22.8H27.96z"/>
+                                            <polyline class="st0" points="53.83,22.8 53.83,36.79 47.95,36.79 47.95,22.8 40.65,22.8 40.65,58.54 48.07,58.54 48.07,44.15 53.96,44.15 53.96,58.54 61.36,58.54 61.36,22.8 53.83,22.8"/>
+                                        </g>
+                                        <g>
+                                            <path class="st0" d="M96.85,16.93h9.83v2.97h-2.94v11.22c0,1.68-0.03,3.27,0.86,4.72c0.86,1.39,2.31,1.98,3.93,1.98c0.82,0,1.39-0.17,2.14-0.5c1.22-0.49,1.91-1.88,2.28-3.07c0.3-1.09,0.23-2.38,0.23-3.46V19.9h-2.9v-2.97h9.4v2.97h-2.38v10.49c0,1.78,0.1,3.83-0.63,5.51c-0.73,1.65-1.95,3.04-3.5,3.93c-1.25,0.76-3.6,1.12-5.08,1.12c-1.45,0-3.56-0.43-4.82-1.12c-1.39-0.73-2.41-1.91-3.13-3.27c-0.96-1.72-0.92-3.66-0.92-5.58V19.9h-2.38V16.93z"/>
+                                            <path class="st0" d="M126.45,25.87c1.12-2.24,2.8-3.3,5.28-3.3c2.71,0,4.75,1.68,5.15,3.3c0.23,0.92,0.23,1.62,0.23,2.38v9.5h2.18v2.8h-8.61v-2.8h2.05v-7.89c0-0.86,0.03-1.55-0.23-2.41c-0.3-1.06-1.19-1.85-2.34-1.85c-3.2,0-3.4,3-3.4,5.44v6.7h2.11v2.8h-8.81v-2.8h2.31V25.81h-2.31V23h6.4V25.87z"/>
+                                            <path class="st0" d="M140.79,40.56v-2.8h2.34V25.81h-2.34V23h6.73v14.75h2.05v2.8H140.79z M147.53,16.3v4.03h-4.39V16.3H147.53z"/>
+                                            <path class="st0" d="M149.41,23h8.25v2.81h-2.18l3.27,11.19h0.03l3.7-11.19h-2.21V23h7.72v2.81h-1.35l-5.18,14.75h-5.44l-5.21-14.75h-1.39V23z"/>
+                                            <path class="st0" d="M172.74,32.67c-0.03,2.51,1.02,5.41,4.03,5.41c1.75,0,2.97-1.19,3.27-2.87h4.19c-0.3,3.86-4.12,5.74-7.69,5.74c-1.12,0-2.64-0.36-3.66-0.83c-1.15-0.53-1.91-1.19-2.67-2.21c-1.39-1.78-1.91-4.09-1.91-6.3c0-4.82,2.74-9.04,8.05-9.04c2.34,0,4.55,0.63,6.17,2.34c1.42,1.52,1.85,3.99,1.95,5.97c0.03,0.53,0.1,1.02,0.03,1.52c0,0.1-0.03,0.17-0.03,0.26H172.74z M180.03,30.13c-0.03-1.98-0.82-4.82-3.33-4.82c-2.77,0-3.66,2.51-3.86,4.82H180.03z"/>
+                                            <path class="st0" d="M192.04,26.73c0.69-3.07,2.77-4.32,5.84-4.03v4.29c-0.49-0.13-1.02-0.26-1.55-0.26c-1.62,0-3.04,0.99-3.6,2.47c-0.43,1.19-0.43,2.8-0.43,4.03v4.52h2.8v2.8h-9.5v-2.8h2.31V25.81h-2.31V23h6.43V26.73z"/>
+                                            <path class="st0" d="M209.37,28.64c-0.2-1.88-0.89-3.43-3-3.43c-1.42,0-2.74,0.63-2.74,2.24c0,0.56,0.17,0.92,0.53,1.35c0.3,0.23,0.66,0.33,0.99,0.5c1.88,0.53,5.41,0.79,6.73,2.44c0.89,1.09,1.22,2.11,1.22,3.5c0.03,1.02-0.43,2.61-1.09,3.53c-0.79,1.09-2.71,2.18-5.18,2.18c-1.65,0-3.43-0.76-4.32-2.18v1.78h-3.17v-6.1h3.43c0.13,2.18,1.09,3.7,3.43,3.7c1.22,0,2.47-0.86,2.47-2.18c0-0.66-0.2-1.45-0.86-1.78c-1.98-0.96-4.39-0.73-6.27-1.98c-1.62-1.12-2.24-2.64-2.24-4.59c-0.17-1.45,0.69-2.51,1.15-3.17c0.66-0.92,2.84-1.88,4.88-1.88c1.52,0,3.23,0.66,4.16,1.88V23h3.1v5.64H209.37z"/>
+                                            <path class="st0" d="M214.71,40.56v-2.8h2.34V25.81h-2.34V23h6.73v14.75h2.05v2.8H214.71z M221.44,16.3v4.03h-4.39V16.3H221.44z"/>
+                                            <path class="st0" d="M235.47,35.94c0,2.08-0.66,3.99-2.84,4.69c-0.36,0.13-1.45,0.33-1.81,0.33c-0.79,0-1.25-0.13-2.01-0.33c-1.52-0.46-2.34-1.52-2.67-3c-0.17-0.73-0.13-2.28-0.13-3.07v-8.74h-2.61V23h2.61v-3l4.39-1.48V23h4.39v2.81h-4.39v10.99c0,0.33,0.2,0.99,0.53,1.12c2.01,0.82,1.88-1.98,1.85-3.17h2.71V35.94z"/>
+                                            <path class="st0" d="M236.3,23h8.41v2.81h-2.28l3.37,9.27l0.17,0.43l3.37-9.7h-2.18V23h7.79v2.81h-1.39l-6.27,15.84c-1.06,2.74-2.08,4.69-5.38,4.69c-0.89,0-1.78,0-2.64-0.17v-3.04c0.59,0.03,1.19,0.1,1.78,0.1c1.58,0,1.91-0.53,2.47-1.88l0.23-0.56l-6.04-14.98h-1.42V23z"/>
+                                        </g>
+                                        <g>
+                                            <path class="st0" d="M266.33,38.05c-1.45-1.81-2.01-4.12-2.01-6.4c0-2.47,0.59-4.72,2.31-6.57c1.55-1.65,3.89-2.51,6.14-2.51c5.64,0,8.68,3.93,8.68,9.24c0,5.08-3.13,9.14-8.55,9.14C270.52,40.95,267.82,39.89,266.33,38.05z M268.91,31.75c0,1.45,0.13,2.77,0.82,4.09c0.63,1.25,1.75,2.21,3.23,2.21c1.58,0,2.67-1.12,3.27-2.47c0.5-1.16,0.63-2.67,0.63-3.89c0-1.45-0.13-2.71-0.79-4.03c-0.63-1.22-1.68-2.18-3.17-2.18C269.73,25.48,268.91,29.3,268.91,31.75z"/>
+                                            <path class="st0" d="M282.44,25.81V23h2.57v-1.52c0-1.62,0.33-3.33,1.78-4.26c1.42-0.96,2.77-1.29,4.49-1.29c0.83,0,1.65,0.2,2.48,0.43v2.97c-0.59-0.1-1.16-0.2-1.75-0.2c-0.89,0-1.62,0.2-2.24,0.89c-0.4,0.53-0.36,1.75-0.36,2.31V23h3v2.81h-3v11.94h2.9v2.8h-9.67v-2.8h2.38V25.81H282.44z"/>
+                                        </g>
+                                        <g>
+                                            <path class="st0" d="M96.85,73.72v-2.97h2.74V53.06h-2.74v-2.97h8.78l8.78,18.58h0.03V53.06h-2.77v-2.97h9.31v2.97h-2.57v20.66h-5.84l-8.98-19.07h-0.03v16.1h2.61v2.97H96.85z"/>
+                                            <path class="st0" d="M125.26,65.83c-0.03,2.51,1.02,5.41,4.03,5.41c1.75,0,2.97-1.19,3.27-2.87h4.19c-0.3,3.86-4.12,5.74-7.69,5.74c-1.12,0-2.64-0.36-3.66-0.83c-1.15-0.53-1.91-1.19-2.67-2.21c-1.39-1.78-1.91-4.09-1.91-6.3c0-4.82,2.74-9.04,8.05-9.04c2.34,0,4.55,0.63,6.17,2.34c1.42,1.52,1.85,3.99,1.95,5.97c0.03,0.53,0.1,1.02,0.03,1.52c0,0.1-0.03,0.17-0.03,0.26H125.26z M132.56,63.29c-0.03-1.98-0.82-4.82-3.33-4.82c-2.77,0-3.66,2.51-3.86,4.82H132.56z"/>
+                                            <path class="st0" d="M146.16,56.16v2.81h-2.34l2.51,11.35h0.03l3.73-14.16h5.35l3.27,14.16h0.03l2.97-11.35h-2.24v-2.81h7.79v2.81h-1.62l-4.22,14.75h-5.54l-3.17-13.17l-3.6,13.17h-5.54l-4.22-14.75h-1.55v-2.81H146.16z"/>
+                                        </g>
+                                        <g>
+                                            <path class="st0" d="M177.74,73.72v-2.97h2.71V53.06h-2.71v-2.97h10.1v2.97h-2.87v7.19h9.57v-7.19h-2.87v-2.97h10.13v2.97h-2.74v17.69h2.74v2.97h-10.13v-2.97h2.87v-7.52h-9.57v7.52h2.87v2.97H177.74z"/>
+                                            <path class="st0" d="M214.17,70.91c-0.99,2.21-3.1,3.2-5.48,3.2c-2.44,0-4.82-1.39-5.21-3.2c-0.36-1.15-0.4-1.75-0.4-2.28c0-1.48,0.59-2.97,1.72-3.96c0.86-0.79,2.84-1.48,3.99-1.52c0.82-0.03,1.72-0.17,2.54-0.17c0.79,0,1.58,0.1,2.38,0.13c0.23-2.11-0.07-4.75-2.8-4.75c-1.91,0-2.84,1.32-2.8,3.17h-4.36c0.1-4.29,3.3-5.81,7.16-5.81c2.74,0,5.31,0.73,6.5,3.43c0.26,0.59,0.33,0.96,0.43,1.65c0.1,0.76,0.13,1.48,0.13,2.24v7.89h2.28v2.77h-6.07V70.91z M211.76,65.6c-2.24,0-4.29,0.53-4.29,3.2c0,1.35,0.89,2.44,2.31,2.44c3.2,0,3.96-3.07,4.06-5.64H211.76z"/>
+                                            <path class="st0" d="M228.04,59.03c1.12-2.24,2.97-3.3,5.51-3.3c2.34,0,4.06,0.89,4.88,3.3c0.96-2.24,2.84-3.3,5.11-3.3c2.51,0,4.29,1.15,5.15,3.3c0.43,1.09,0.3,1.88,0.3,2.74v9.14h2.14v2.8h-8.61v-2.8h2.08v-7.82c0-1.78-0.23-4.12-2.61-4.12c-1.29,0-2.21,0.59-2.77,1.78c-0.56,1.15-0.56,2.14-0.56,3.4v6.76h2.05v2.8h-8.45v-2.8h2.01v-8.12c0-0.99,0-1.75-0.43-2.67c-0.33-0.69-1.19-1.15-1.95-1.15c-1.85,0-2.84,1.12-3.33,2.77c-0.23,0.86-0.23,1.68-0.23,2.57v6.6h2.11v2.8h-8.81v-2.8h2.31V58.97h-2.31v-2.81h6.4V59.03z"/>
+                                            <path class="st0" d="M257.81,59.13c1.22-2.38,3.1-3.4,5.18-3.4c2.67,0,4.45,1.09,6.04,3.4c0.69,1.02,1.29,3.2,1.29,5.58c0,2.64-0.26,4.29-1.65,6.57c-1.12,1.85-3.5,2.84-5.61,2.84c-1.95,0-3.66-0.86-4.98-3.04v5.18h2.47v2.8h-9.17v-2.8h2.31V58.97h-2.31v-2.81h6.43V59.13z M258.87,60.71c-0.76,1.45-1.06,2.87-1.06,4.29c0,2.48,0.96,6.14,4.06,6.14c3.17,0,3.93-3.46,3.93-5.97s-0.5-6.57-3.8-6.57C260.58,58.6,259.39,59.59,258.87,60.71z"/>
+                                            <path class="st0" d="M282.13,61.8c-0.2-1.88-0.89-3.43-3-3.43c-1.42,0-2.74,0.63-2.74,2.24c0,0.56,0.17,0.92,0.53,1.35c0.3,0.23,0.66,0.33,0.99,0.5c1.88,0.53,5.41,0.79,6.73,2.44c0.89,1.09,1.22,2.11,1.22,3.5c0.03,1.02-0.43,2.61-1.09,3.53c-0.79,1.09-2.71,2.18-5.18,2.18c-1.65,0-3.43-0.76-4.32-2.18v1.78h-3.17v-6.1h3.43c0.13,2.18,1.09,3.7,3.43,3.7c1.22,0,2.47-0.86,2.47-2.18c0-0.66-0.2-1.45-0.86-1.78c-1.98-0.96-4.39-0.73-6.27-1.98c-1.62-1.12-2.24-2.64-2.24-4.59c-0.17-1.45,0.69-2.51,1.15-3.17c0.66-0.92,2.84-1.88,4.88-1.88c1.52,0,3.23,0.66,4.16,1.88v-1.45h3.1v5.64H282.13z"/>
+                                            <path class="st0" d="M287.29,73.72v-2.8h2.24V52.5h-2.24v-2.8h6.63v8.74c1.22-1.95,2.71-2.71,5.02-2.71c1.45,0,3.2,0.43,4.19,1.55c1.06,1.19,1.22,2.64,1.22,4.16v9.47h2.21v2.8h-8.74v-2.8h2.14v-7.89c0-0.66-0.07-1.35-0.17-2.01c-0.1-1.25-1.12-2.28-2.41-2.28c-1.58,0-2.47,0.82-3,2.24c-0.49,1.22-0.46,2.44-0.46,3.73v6.2h2.15v2.8H287.29z"/>
+                                            <path class="st0" d="M307.88,73.72v-2.8h2.34V58.97h-2.34v-2.81h6.73v14.75h2.05v2.8H307.88z M314.61,49.46v4.03h-4.39v-4.03H314.61z"/>
+                                            <path class="st0" d="M324.6,59.89c0.69-3.07,2.77-4.32,5.84-4.03v4.29c-0.49-0.13-1.02-0.26-1.55-0.26c-1.62,0-3.04,0.99-3.6,2.47c-0.43,1.19-0.43,2.8-0.43,4.03v4.52h2.8v2.8h-9.5v-2.8h2.31V58.97h-2.31v-2.81h6.43V59.89z"/>
+                                            <path class="st0" d="M335.72,65.83c-0.03,2.51,1.02,5.41,4.03,5.41c1.75,0,2.97-1.19,3.27-2.87h4.19c-0.3,3.86-4.12,5.74-7.69,5.74c-1.12,0-2.64-0.36-3.66-0.83c-1.15-0.53-1.91-1.19-2.67-2.21c-1.39-1.78-1.91-4.09-1.91-6.3c0-4.82,2.74-9.04,8.05-9.04c2.34,0,4.55,0.63,6.17,2.34c1.42,1.52,1.85,3.99,1.95,5.97c0.03,0.53,0.1,1.02,0.03,1.52c0,0.1-0.03,0.17-0.03,0.26H335.72z M343.02,63.29c-0.03-1.98-0.82-4.82-3.33-4.82c-2.77,0-3.66,2.51-3.86,4.82H343.02z"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="header" role="banner">
+                <div class="container-fluid">
+                    <div class="header__site-name">
+                        <div><span>Career and Professional Success</span></div>
+                    </div>
+                    <div class="header__pipe d-none d-lg-block"></div>
+                    <div class="header__site-menu d-none d-lg-block">
+                        <ul class="sf-menu sf-horizontal">
+                            <li><span>Students</span></li>
+                            <li><span>Employers</span></li>
+                            <li><span>Career Technology</span></li>
+                            <li><span>Career Events</span></li>
+                            <li><span>Alumni</span></li>
+                            <li><span>Faculty & Staff</span></li>
+                            <li><span>About CaPS</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container" role="main">
+            <a id="main-content" tabindex="-1"></a>
+            
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><span>Home</span></li>
+                    <li class="breadcrumb-item active is-active" aria-current="page">Student Resources</li>
+                </ol>
+            </nav>
+
+            <section class="layout-container">
+                <aside class="layout-sidebar-first" role="complementary">
+                    <button class="btn btn-arrow d-block d-md-none collapsed" type="button">In This Section</button>
+                    <div class="collapse dont-collapse-sm">
+                        <nav role="navigation" class="sidemenu">
+                            <h2><span>Students</span></h2>
+                            <ul class="menu menu-level-0">
+                                <li class="menu-item">
+                                    <span>Wildcat Way to Professional Success</span>
+                                </li>
+                                <li class="menu-item menu-item--expanded menu-item--active-trail">
+                                    <span>Resources</span>
+                                    <ul class="menu menu-level-1">
+                                        <li class="menu-item">
+                                            <span>Resumes</span>
+                                        </li>
+                                        <li class="menu-item menu-item--active-trail">
+                                            <span class="is-active">Cover Letters</span>
+                                        </li>
+                                        <li class="menu-item">
+                                            <span>References and Thank You Notes</span>
+                                        </li>
+                                        <li class="menu-item">
+                                            <span>DIY Professional Headshot Photo Booth</span>
+                                        </li>
+                                        <li class="menu-item">
+                                            <span>Campus Involvement</span>
+                                        </li>
+                                        <li class="menu-item">
+                                            <span>Interview Skills</span>
+                                        </li>
+                                        <li class="menu-item menu-item--collapsed">
+                                            <span>Networking</span>
+                                        </li>
+                                        <li class="menu-item">
+                                            <span>Workplace Safety</span>
+                                        </li>
+                                        <li class="menu-item menu-item--expanded">
+                                            <span>Additional Resources</span>
+                                            <ul class="menu menu-level-2">
+                                                <li class="menu-item">
+                                                    <span>Summer Employment Opportunities with Housing</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item">
+                                    <span>Jobs and Careers for Students</span>
+                                </li>
+                                <li class="menu-item menu-item--collapsed">
+                                    <span>Internships</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span>Internship Funding Opportunities</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span>Applying to Grad School</span>
+                                </li>
+                                <li class="menu-item">
+                                    <span>Reserve an Interview Room</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+
+                <div class="layout-content">
+                    <h1><span>Cover Letters</span></h1>
+                    
+                    <article>
+                        <div class="field__item">
+                            <p>A cover letter <strong>emphasizes your interest</strong> in a specific position and employer. Your resume is providing the who, what, when, where for employers, the <strong>cover letter provides the why</strong>. Showcases how your background <strong>matches</strong> the needs of the employer. Cover letters are <strong>not long</strong> ― A half-page, 3 paragraphs, is best. All cover letters should be <strong>individually created for a specific job</strong> ― Do not use generic templates. It's okay to get <strong>personal</strong> and provide examples of life experiences if they strongly highlight why you are a great fit for the role. Just remember, while personal information can help you stand out, you do not want to tell someone your whole life story, so use good judgment.</p>
+                        </div>
+
+                        <div class="field__item">
+                            <p class="text-align-center">
+                                <span class="btn btn-block btn-primary">Cover Letter Samples</span>
+                            </p>
+                        </div>
+
+                        <div class="para__layout__two-column">
+                            <div class="para__bg--gray-200">
+                                <div class="h4">
+                                    <span class="fontawesome-icon-inline">
+                                        <span class="fa-paste"></span>
+                                    </span>
+                                    Presentation
+                                </div>
+                                <ul>
+                                    <li>Use <strong>simple</strong>, <strong>direct language</strong> and <strong>correct grammar</strong></li>
+                                    <li>Letters should be <strong>flawless</strong> ― no typos or spelling errors</li>
+                                    <li><strong>Single-space your letters</strong> and put in business letter format (add your heading, the date, who it's going to, etc.)</li>
+                                    <li>If printed, use <strong>high-quality</strong>, white or off-white paper - match resume paper</li>
+                                    <li>Online/email submission, save and send as a <strong>PDF</strong></li>
+                                </ul>
+                            </div>
+
+                            <div class="para__bg--gray-200">
+                                <div class="h4">
+                                    <span class="fontawesome-icon-inline">
+                                        <span class="fa-play"></span>
+                                    </span>
+                                    Introductory Paragraph
+                                </div>
+                                <ul>
+                                    <li>State why you are writing the employer</li>
+                                    <li>Indicate the position and how you learned of it</li>
+                                    <li>A brief sentence that gives your degree, major, college, and graduation date</li>
+                                    <li>Hint at what is to come in the next paragraph by sharing general ability/value you will bring to the experience, stay broad you will get more specific in the body paragraph</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="para__layout__two-column para__padding--top-small">
+                            <div class="para__bg--gray-200">
+                                <div class="h4">
+                                    <span class="fontawesome-icon-inline">
+                                        <span class="fa-paragraph"></span>
+                                    </span>
+                                    Body Paragraph
+                                </div>
+                                <ul>
+                                    <li>Describe how your education, experience, and personal skills make you a good match for the position</li>
+                                    <li>Be specific, offering proof of your experiences and clearly describe ways you will contribute</li>
+                                    <li>Outline one or two specific examples of how your skills and experiences will meet the company's needs</li>
+                                    <li>Refer to the organization you are applying to, and discuss what it is about them and the job opportunity that appeals to you ― Why do you want to work for this company specifically?</li>
+                                    <li>Emphasize your knowledge of the organization (do research) and your familiarity with the field</li>
+                                    <li>Avoid cliché language such as passion, love, it is a dream come true, etc.</li>
+                                    <li>A genuine show of enthusiasm and knowledge will set you apart from those sending generic form letters</li>
+                                </ul>
+                            </div>
+
+                            <div class="para__bg--gray-200">
+                                <div class="h4">
+                                    <span class="fontawesome-icon-inline">
+                                        <span class="fa-stop"></span>
+                                    </span>
+                                    Closing Paragraph
+                                </div>
+                                <ul>
+                                    <li>Always thank the employer for considering your application</li>
+                                    <li>Say what you'll be doing to follow up on your letter, be polite and proactive but not demanding</li>
+                                    <li>Provide a summative statement of your value or your strength</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer__main">
+                <div class="container-fluid">
+                    <div class="footer__main__first">
+                        <div class="para__layout__two-column">
+                            <div>
+                                <p class="mb-0"><strong><span class="text-uppercase">The Next Step</span></strong></p>
+                                <hr class="hr--quarter-width hr--primary mt-1 mb-3 ml-0">
+                                <ul class="list-unstyled">
+                                    <li><span>Handshake</span></li>
+                                    <li><span>Schedule an Appointment</span></li>
+                                    <li><span>Reserve an Interview Room</span></li>
+                                    <li><span>Hire a Wildcat</span></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p class="mb-0"><strong><span class="text-uppercase">CAPS by college</span></strong></p>
+                                <hr class="hr--quarter-width hr--primary mt-1 mb-3 ml-0">
+                                <ul class="list-unstyled">
+                                    <li><span>College of Engineering and Physical Sciences</span></li>
+                                    <li><span>College of Health and Human Services</span></li>
+                                    <li><span>College of Liberal Arts</span></li>
+                                    <li><span>College of Life Sciences and Agriculture</span></li>
+                                    <li><span>College of Professional Studies</span></li>
+                                    <li><span>Paul College of Business and Economics</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__main__second">
+                        <p class="mb-0"><strong><span class="text-uppercase">Contact Us</span></strong></p>
+                        <hr class="hr--quarter-width hr--primary-dark mt-1 mb-3 ml-0">
+                        <div class="h2">Career and Professional Success</div>
+                        <p>Hood House<br>
+                        89 Main St.<br>
+                        Durham, NH 03824</p>
+                        <p>(603) 862-2070<br>
+                        caps@unh.edu<br>
+                        @UNHCaPs</p>
+                        
+                        <p class="font-size-20">
+                            <span title="Like us on Facebook">📘 Facebook</span>
+                            <span title="Follow us on Twitter">🐦 Twitter</span>
+                            <span title="Follow us on LinkedIn">💼 LinkedIn</span>
+                            <span title="Follow us on Instagram">📷 Instagram</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); text-align: center;">
+                    <p>Copyright © 2025, University of New Hampshire. All rights reserved.<br>
+                    TTY Users: 7-1-1 or 800-735-2964 (Relay NH)</p>
+                    <ul class="list-inline" style="justify-content: center; margin-top: 1rem;">
+                        <li class="list-inline-item">USNH Privacy Policies</li>
+                        <li class="list-inline-item">USNH Terms of Use</li>
+                        <li class="list-inline-item">ADA Acknowledgment</li>
+                        <li class="list-inline-item">Statement of Nondiscrimination</li>
+                        <li class="list-inline-item">Jeanne Clery Act</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+ </script>
+
+</body>
+    <a href="index3.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
+
+</html>
