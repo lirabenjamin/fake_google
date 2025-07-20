@@ -400,6 +400,32 @@ May 29, 2024 — A cover letter is a one-page document that you attach to your r
         });
 
     </script>
+    <script>
+(() => {
+  // Grab every link in the results section
+  const links = document.querySelectorAll('.search-result a');
+
+  links.forEach(a => {
+    a.addEventListener('click', e => {
+      // Build a payload with whatever you care about
+      const payload = {
+        type: 'FAKE_SEARCH_CLICK',
+        href: a.href,
+        text: a.textContent.trim(),
+        ts: Date.now()
+      };
+
+      // Tell the parent window
+      window.parent.postMessage(payload, '*');
+
+      /* Optional: let the message leave before navigation happens.
+         We open in a new tab so this page (and its JS) stays alive long
+         enough to send the event. */
+      a.target = '_blank';
+    });
+  });
+})();
+</script>
 </body>
 
 </html>
