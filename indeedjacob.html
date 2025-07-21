@@ -748,19 +748,19 @@
             });
         });
 
-        // Add loading animation for job links
-        jobLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.style.opacity = '0.6';
-                this.textContent = 'Loading...';
+        // // Add loading animation for job links
+        // jobLinks.forEach(link => {
+        //     link.addEventListener('click', function(e) {
+        //         e.preventDefault();
+        //         this.style.opacity = '0.6';
+        //         this.textContent = 'Loading...';
                 
-                setTimeout(() => {
-                    this.style.opacity = '1';
-                    this.textContent = this.getAttribute('data-original-text') || 'Sample Cover Letter';
-                }, 1000);
-            });
-        });
+        //         setTimeout(() => {
+        //             this.style.opacity = '1';
+        //             this.textContent = this.getAttribute('data-original-text') || 'Sample Cover Letter';
+        //         }, 1000);
+        //     });
+        // });
 
         // Store original text for job links
         jobLinks.forEach(link => {
