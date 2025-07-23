@@ -1,0 +1,20 @@
+{
+  "name": "fake-google-research",
+  "version": "1.0.0",
+  "description": "Research experiment simulating Google search",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'Static build complete'",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongodb": "^6.3.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
