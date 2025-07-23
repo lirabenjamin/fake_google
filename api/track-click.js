@@ -7,6 +7,8 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  console.log('Track-click API called with:', req.body);
+
   try {
     const { 
       prolificId, 
@@ -21,9 +23,17 @@ module.exports = async function handler(req, res) {
     } = req.body;
 
     if (!prolificId || !linkClicked) {
+      console.log('Missing required fields:', { prolificId, linkClicked });
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
+    if (!uri) {
+      console.error('MONGODB_URI environment variable not set');
+      return res.status(500).json({ error: 'Database configuration missing' });
+    }
+
+    console.log('Connecting to MongoDB...');
+    const client = new MongoClient(uri);
     await client.connect();
     const db = client.db(process.env.MONGODB_DATABASE || 'research_tracking');
     const collection = db.collection(process.env.MONGODB_COLLECTION || 'click_events');
@@ -42,7 +52,9 @@ module.exports = async function handler(req, res) {
       createdAt: new Date()
     };
 
+    console.log('Inserting click data:', clickData);
     const result = await collection.insertOne(clickData);
+    console.log('MongoDB insert result:', result);
     
     res.status(200).json({ 
       success: true, 

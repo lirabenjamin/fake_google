@@ -127,6 +127,8 @@
       pageUrl: window.location.href
     };
 
+    console.log('Tracking click:', clickData); // Debug log
+
     // Send tracking data to API
     fetch('/api/track-click', {
       method: 'POST',
@@ -134,7 +136,15 @@
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(clickData)
-    }).catch(error => {
+    })
+    .then(response => {
+      console.log('Click tracking response:', response.status, response.statusText);
+      return response.json();
+    })
+    .then(data => {
+      console.log('Click tracking success:', data);
+    })
+    .catch(error => {
       console.error('Error tracking click:', error);
     });
   }
