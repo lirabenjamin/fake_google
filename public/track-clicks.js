@@ -93,13 +93,24 @@
       pageUrl: window.location.href
     };
 
+    console.log('Sending active time data:', timeData);
+
     fetch('/api/track-time', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(timeData)
-    }).catch(error => {
+      body: JSON.stringify(timeData),
+      keepalive: true // Important for requests during page unload
+    })
+    .then(response => {
+      console.log('Time tracking response:', response.status, response.statusText);
+      return response.json();
+    })
+    .then(data => {
+      console.log('Time tracking success:', data);
+    })
+    .catch(error => {
       console.error('Error tracking active time:', error);
     });
   }
@@ -135,7 +146,8 @@
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(clickData)
+      body: JSON.stringify(clickData),
+      keepalive: true
     })
     .then(response => {
       console.log('Click tracking response:', response.status, response.statusText);
@@ -162,7 +174,39 @@
 
   // Send final active time data when page unloads
   function handlePageUnload() {
-    sendActiveTimeData();
+    const prolificId = getProlificId();
+    
+    if (!prolificId) {
+      return;
+    }
+
+    updateActiveTime();
+
+    const timeData = {
+      prolificId: prolificId,
+      eventType: 'session_end',
+      totalActiveTime: Math.round(totalActiveTime / 1000),
+      sessionDuration: Math.round((Date.now() - sessionStartTime) / 1000),
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      referrer: document.referrer,
+      pageUrl: window.location.href
+    };
+
+    // Use sendBeacon for reliable unload tracking
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon('/api/track-time', JSON.stringify(timeData));
+    } else {
+      // Fallback for older browsers
+      fetch('/api/track-time', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(timeData),
+        keepalive: true
+      }).catch(() => {}); // Ignore errors during unload
+    }
   }
 
   // Initialize everything when DOM is ready
