@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter - Penn State</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header */
+        .header {
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-placeholder {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+            border-radius: 8px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            cursor: default;
+        }
+
+        .nav-menu a:hover {
+            color: #1e3a8a;
+        }
+
+        .get-started-btn {
+            background-color: #fbbf24;
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: default;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,255,255,0.05)"/><circle cx="40" cy="80" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: #e5e7eb;
+            padding: 15px 0;
+            font-size: 14px;
+        }
+
+        .breadcrumb-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumb a {
+            color: #4b5563;
+            text-decoration: none;
+            cursor: default;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content-section {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section-header {
+            background-color: #4f81c7;
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .section-header h2 {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .expand-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .section-content {
+            padding: 30px;
+            display: block;
+        }
+
+        .section-content.collapsed {
+            display: none;
+        }
+
+        .section-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-content li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section-content li::before {
+            content: '•';
+            color: #4f81c7;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            margin-bottom: 40px;
+        }
+
+        .intro-section h2 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        /* Contents Section */
+        .contents-section {
+            margin-bottom: 40px;
+        }
+
+        .contents-section h3 {
+            color: #1e3a8a;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Additional Sections */
+        .formatting-section, .sample-section, .review-section {
+            margin-bottom: 40px;
+        }
+
+        .formatting-section h3, .sample-section h3, .review-section h3 {
+            color: #1e3a8a;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .formatting-section p, .sample-section p, .review-section p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #4b5563;
+        }
+
+        .formatting-section ul, .review-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .formatting-section li, .review-section li {
+            margin-bottom: 8px;
+            color: #4b5563;
+        }
+
+        /* Resources Section */
+        .resources-section {
+            margin-top: 50px;
+        }
+
+        .resources-section h3 {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .resource-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .resource-card h4 {
+            color: #1e3a8a;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .resource-card p {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Links styling */
+        a {
+            color: #4f81c7;
+            text-decoration: underline;
+            cursor: default;
+        }
+
+        a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .main-content {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-placeholder">PS</div>
+                <span style="font-weight: bold; color: #1e3a8a;">Penn State</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#">Admissions ▼</a></li>
+                    <li><a href="#">Academics ▼</a></li>
+                    <li><a href="#">Research ▼</a></li>
+                    <li><a href="#">Student Life ▼</a></li>
+                    <li><a href="#">Athletics ▼</a></li>
+                    <li><a href="#">Support State ▼</a></li>
+                    <li><a href="#">About ▼</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="get-started-btn">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Cover Letter</h1>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="#">Home</a> > <a href="#">Student Career and Employment</a> > Cover Letter
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Intro Section -->
+        <div class="content-section intro-section">
+            <div style="padding: 30px;">
+                <h2>Cover Letters: Explained</h2>
+                <p>A cover letter or letter of application accompanies a resume when you apply for a position. You should be tailored to the position and highlight your skills and experiences as well as your interest in the position.</p>
+                <p>This is your chance to show your enthusiasm and highlight some qualities that may not be readily apparent on your resume. Show your personality and make an impressive before anybody sees your resume.</p>
+            </div>
+        </div>
+
+        <!-- Contents Section -->
+        <div class="contents-section">
+            <h3>Contents of a Cover Letter</h3>
+            <p>The four main sections that should be included in an effective cover letter:</p>
+        </div>
+
+        <!-- Cover Letter Basics -->
+        <div class="content-section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <h2>Cover Letter Basics</h2>
+                <span class="expand-icon">—</span>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li>Make sure to include your complete contact information at the top of the letter. <a href="#">See the Model of a Cover Letter PDF example to see how to format this correctly</a>.</li>
+                    <li>Address the letter to the person who has the power and ability to hire you. Take time to look up a contact via the organization's website or in the posting. Avoid sir, madam, or to whom it may concern.</li>
+                    <li>Keep the letter to one page and avoid using too many 'I' statements.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Opening Paragraph -->
+        <div class="content-section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <h2>Opening Paragraph</h2>
+                <span class="expand-icon">+</span>
+            </div>
+            <div class="section-content collapsed">
+                <ul>
+                    <li>State the position to which you are applying.</li>
+                    <li>Indicate how you learned about the position.</li>
+                    <li>Target your letter and focus on the organization's needs. Use key information included in the position, research the organization using their website, and <a href="#">use one of the online resources in the Career Resource Center</a> to research organization specifics.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Body Paragraph -->
+        <div class="content-section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <h2>Body Paragraph</h2>
+                <span class="expand-icon">+</span>
+            </div>
+            <div class="section-content collapsed">
+                <ul>
+                    <li>Highlight your qualifications in relation to the position description.</li>
+                    <li>Draw on your experiences and site-specific examples.</li>
+                    <li>Do not repeat what is already on your resume.</li>
+                    <li>Incorporate keywords included in the job description.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Closing Paragraph -->
+        <div class="content-section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <h2>Closing Paragraph</h2>
+                <span class="expand-icon">+</span>
+            </div>
+            <div class="section-content collapsed">
+                <ul>
+                    <li>Let the reader know how you will contribute to the position.</li>
+                    <li>Restate your interest in the position.</li>
+                    <li>Push for a follow-up and indicate your ability to be available for an interview.</li>
+                    <li>Make follow-up easy and restate your phone number and email address along with the best times to be contacted.</li>
+                    <li>Express appreciation for their time and consideration.</li>
+                    <li>Close with sincerely, respectfully, etc.</li>
+                    <li>Use a handwritten signature or a digital version of one.</li>
+                    <li>Include your typed formal name below your signature.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Formatting Section -->
+        <div class="content-section formatting-section">
+            <div style="padding: 30px;">
+                <h3>Formatting a Cover Letter</h3>
+                <p>Make sure to use completely understand paragraphs when crafting your cover letter. Subheadings included in the design of a Cover Letter below are designed to show content available and should not be used in a way to format a formal cover letter.</p>
+                <ul>
+                    <li><a href="#">Model of a Cover Letter example</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sample Cover Letter -->
+        <div class="content-section sample-section">
+            <div style="padding: 30px;">
+                <h3>Sample Cover Letter</h3>
+                <p>Take a look at an actual sample formatting your own cover letter. Make sure to that yours and always cover letter to maximize the effort.</p>
+                <ul>
+                    <li><a href="#">Download Cover Letter</a></li>
+                    <li><a href="#">Get Cover Another Cover Letter Sample</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="content-section review-section">
+            <div style="padding: 30px;">
+                <h3>Review, Review, Review</h3>
+                <p>Take time to read and review your cover letter several times before using it in an application. <a href="#">Schedule an eCamp appointment to review</a> your letter helps to make sure your points are concise and easy to understand while helping to avoid grammatical and any spelling errors.</p>
+            </div>
+        </div>
+
+        <!-- Additional Resources -->
+        <div class="resources-section">
+            <h3>Additional Resources</h3>
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <h4>Career Counseling</h4>
+                    <p>Individual career counseling will help you build your own vision, approach your opportunities, and move purposefully.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Resumes, Cover Letter, and Correspondence</h4>
+                    <p>Put your best face forward and you land help by our services ensuring you're seeing a boost.</p>
+                </div>
+                <div class="resource-card">
+                    <h4>Interviewing and Job Search</h4>
+                    <p>Get insider tips and tricks on interviewing techniques to find the best opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.expand-icon');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                icon.textContent = '—';
+            } else {
+                content.classList.add('collapsed');
+                icon.textContent = '+';
+            }
+        }
+    </script>
+
+    <!-- Click tracking script -->
+    <script src="/track-clicks.js"></script>
+</body>
+    <a href="index4.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
+
+</html>

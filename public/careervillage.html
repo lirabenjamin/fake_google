@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What does a good cover letter look like? | CareerVillage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d3e50;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links span {
+            color: #555;
+            font-weight: 500;
+            cursor: default;
+        }
+        
+        .nav-links button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .ask-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .signup-button {
+            background-color: transparent;
+            border: 2px solid #4CAF50 !important;
+            color: #4CAF50;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr 300px;
+            gap: 30px;
+        }
+        
+        /* User Profile Sidebar */
+        .user-profile {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            height: fit-content;
+        }
+        
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin: 0 auto 10px;
+        }
+        
+        .user-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .user-role {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .user-location {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+        .user-stats {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Main Question Content */
+        .main-content {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .question-meta {
+            display: flex;
+            gap: 15px;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .question-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #2d3e50;
+        }
+        
+        .question-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .tag {
+            background-color: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        /* Answers Section */
+        .answers-header {
+            font-size: 20px;
+            margin: 30px 0 20px;
+            color: #2d3e50;
+        }
+        
+        .answer {
+            border-top: 1px solid #e0e0e0;
+            padding: 25px 0;
+        }
+        
+        .answer-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .answer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+        }
+        
+        .answer-author {
+            flex-grow: 1;
+        }
+        
+        .author-name {
+            font-weight: bold;
+            color: #2d3e50;
+        }
+        
+        .author-title {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .answer-meta {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .answer-content {
+            margin-left: 55px;
+            line-height: 1.8;
+        }
+        
+        .answer-content p {
+            margin-bottom: 15px;
+        }
+        
+        .answer-content ol, .answer-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .answer-footer {
+            margin-left: 55px;
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+        
+        .vote-count {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        /* Related Questions Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .related-questions {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .sidebar-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #2d3e50;
+        }
+        
+        .related-question {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .related-question:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .related-question span {
+            color: #1976d2;
+            font-size: 14px;
+            line-height: 1.4;
+            display: block;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2d3e50;
+            color: white;
+            padding: 50px 20px 30px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section span {
+            color: #ccc;
+            font-size: 14px;
+            line-height: 2;
+            display: block;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .user-profile, .sidebar {
+                display: none;
+            }
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <span class="skip-link">Skip to main content</span>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">CareerVillage</div>
+            <nav class="nav-links">
+                <button class="ask-button">Ask Question</button>
+                <button class="signup-button">Sign Up</button>
+                <span>Log In</span>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <aside class="user-profile">
+            <div class="avatar"></div>
+            <div class="user-name">Eugenia</div>
+            <div class="user-role">Student</div>
+            <div class="user-location">📍 Los Angeles, California</div>
+            <div class="user-stats">1 Question Asked</div>
+        </aside>
+        
+        <main id="main-content" class="main-content">
+            <div class="question-meta">
+                <span>Jul 29, 2024</span>
+                <span>·</span>
+                <span>38558 views</span>
+                <span>·</span>
+                <span>Translate</span>
+                <span>·</span>
+                <span>Share</span>
+            </div>
+            
+            <h1 class="question-title">what does a good cover letter look like?</h1>
+            
+            <p class="question-description">
+                Im going to be a third year in college and wanted to apply for my major peer advising position and I've never written a cover letter before
+            </p>
+            
+            <div class="tags">
+                <span class="tag">job-application</span>
+                <span class="tag">resume</span>
+                <span class="tag">resume-writing</span>
+                <span class="tag">application</span>
+                <span class="tag">cover-letters</span>
+            </div>
+            
+            <div class="stats">
+                <span>12 👍</span>
+                <span>11 answers</span>
+            </div>
+            
+            <h2 class="answers-header">11 answers</h2>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Elina Parida</div>
+                        <div class="author-title">Program Manager</div>
+                        <div class="answer-meta">1 Answer · 📍 Hyderabad, Telangana, India</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Sep 25, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Elina's Answer</h3>
+                    <p>Writing a good cover letter is crucial for making a strong first impression. Here are some key points to consider:</p>
+                    
+                    <ol>
+                        <li><strong>Personalization:</strong> Address the letter to a specific person, if possible. Use the hiring manager's name instead of a generic greeting.</li>
+                        <li><strong>Introduction:</strong> Start with a strong opening that grabs attention. Mention the position you are applying for and how you found out about it.</li>
+                        <li><strong>Relevance:</strong> Tailor your cover letter to the job description. Highlight your most relevant skills and experiences that match the job requirements.</li>
+                        <li><strong>Achievements:</strong> Focus on your accomplishments rather than just listing duties. Use specific examples and quantify your achievements when possible.</li>
+                        <li><strong>Company Knowledge:</strong> Show that you have researched the company. Mention why you are interested in working there and how you can contribute to their goals.</li>
+                        <li><strong>Professional Tone:</strong> Maintain a professional and positive tone throughout the letter. Avoid using slang or overly casual language.</li>
+                        <li><strong>Conciseness:</strong> Keep it concise and to the point. A cover letter should ideally be one page long.</li>
+                        <li><strong>Closing:</strong> End with a strong closing statement. Express your enthusiasm for the role and mention that you look forward to the possibility of discussing your application further.</li>
+                        <li><strong>Proofreading:</strong> Carefully proofread your cover letter to avoid any spelling or grammatical errors.</li>
+                        <li><strong>Formatting:</strong> Use a clean and professional format. Ensure that your contact information is easily accessible.</li>
+                    </ol>
+                    
+                    <p>Here's a simple structure you can follow:</p>
+                    <ul>
+                        <li><strong>Opening Paragraph:</strong> Introduce yourself and state the position you are applying for.</li>
+                        <li><strong>Middle Paragraph(s):</strong> Highlight your relevant skills, experiences, and achievements.</li>
+                        <li><strong>Closing Paragraph:</strong> Reiterate your interest in the role and the company, and thank the reader for their time.</li>
+                    </ul>
+                    
+                    <p>Good luck with your cover letter!</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">2 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Kim Igleheart</div>
+                        <div class="author-title">Career Counselor | Police Officer</div>
+                        <div class="answer-meta">1791 Answers · 📍 San Antonio, Texas</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Aug 10, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Kim's Answer</h3>
+                    <p>Hi Eugenia!</p>
+                    <p>Elina's answer pretty much covers it all!</p>
+                    <p>A "good" cover letter allows you the opportunity to come across as a real human being, something a resume does not do! The middle paragraph is crucial - sell yourself! Do not regurgitate the resume. I like to draw on a combination of experiences from different jobs/ volunteer jobs, etc that together make me the "ideal" candidate for the position. If you have a glaring weakness that will make them want to pass over you, address it head on - don't shy away from it.</p>
+                    <p>Please, be considerate of the reader's time and keep it to one page. This does not mean that you say less. . . it means that you say it in fewer words - conciseness!</p>
+                    <p>I commend you for taking the time to learn about cover letters. They can definitely help you in landing the interview!</p>
+                    <p>Best of luck!<br>Kim</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">1 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Tiffanie Rand (Lampasona), CDR, CIR</div>
+                        <div class="author-title">Recruiter</div>
+                        <div class="answer-meta">100 Answers · 📍 Washington, Washington</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Aug 08, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Tiffanie's Answer</h3>
+                    <p>Hi Eugenia,</p>
+                    <p>Great question! I honestly see less and less people writing cover letters but in case you need to write one I think indeed has a lot of good information.</p>
+                    <p>Cover letters should include information about yourself and why you are interested in the specific position you are applying to. The indeed link below outlines exactly the information you need and also provides some really good examples.</p>
+                    <p><strong>Tiffanie recommends the following next steps:</strong></p>
+                    <p>https://www.indeed.com/career-advice/cover-letter-samples</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Sabrina Royer</div>
+                        <div class="author-title">Lawyer</div>
+                        <div class="answer-meta">3 Answers · 📍 Vancouver, British Columbia, Canada</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Aug 14, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Sabrina's Answer</h3>
+                    <p>Thanks for your question! In our experience, good cover letters should be specific to the organization you're applying to. It's good to avoid being too generic, otherwise your cover letter won't stand out from the rest of them.</p>
+                    <p>To start your cover letter you should provide a high level introduction of yourself (what your background is and why this role interested you).</p>
+                    <p>The "meat" of your cover letter will be demonstrating why you would be a good fit for the role. In the last, we've tried to include three bullet points setting out key skills that make us a good candidate for the role. We'd even bold the skill, so it's really clear. Then you should provide examples and stories of how you've previously exercised these skills. Try and make your skills relevant to the role - they should really demonstrate why you'd be a good fit!</p>
+                    <p>Lastly, talk about why you're interested in the Company. Everyone wants to be wanted sometimes! Demonstrating your knowledge about the Company and your interest can help you stand out from the rest of the crowd.</p>
+                    <p><strong>Hot tip:</strong> Don't be afraid to make connections and get in touch! If you find the hiring manager for the role on LinkedIn, connect with them! You could send your cover letter directly to them.</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Ana Melo</div>
+                        <div class="author-title">Verizon innovative learning - Labor Relations</div>
+                        <div class="answer-meta">3 Answers · 📍 Fort Lee, New Jersey</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Aug 27, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Ana's Answer</h3>
+                    <p>The cover letter is usually the first item an employer reads from you. Your letter should immediately indicate what position you are applying for and then give information that demonstrates why you should be considered for the position. Do not repeat all of the information contained in your resume. Instead, highlight or elaborate on resume items that are directly applicable to the position for which you are applying. Focus on the employer's need for a worker, rather than your need for a job. Tell how your skills and personal qualities match the employer's needs. Focus on what you can do for the employer and how you contribute to the organization. Show you have researched the company double check those facts.</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Mary Penn</div>
+                        <div class="author-title">Verizon innovative learning - lawyer</div>
+                        <div class="answer-meta">4 Answers · 📍 Washington, Washington</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Jul 29, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Mary's Answer</h3>
+                    <p>The goal of a cover letter is to spotlight key parts of your experience and background, not to repeat your resume. It's crucial to customize your cover letter for each job you're applying to - don't recycle the same one for different roles. Make sure to mention the specific job you're applying for and include any unique job reference or ID number. If you can, find out who will be reading your cover letter and address it to them directly - LinkedIn can be a great tool for this. Double-check your cover letter several times to ensure it's error-free. Keep your letter concise, ideally not exceeding one page. Start by expressing your interest in the role and the company. Follow this with your specific skills that make you a good fit for the role. A good way to conclude your letter is with a proactive statement, such as, "I'm eager to further discuss how my skills and contributions can benefit your organization." There are plenty of resources online to help you improve your cover letter and resume. Look for powerful verbs to better showcase your experience and abilities.</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Tulip Chowdhury</div>
+                        <div class="author-title">Writer/author</div>
+                        <div class="answer-meta">4 Answers · 📍 Johns Creek, Georgia</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Jul 29, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Tulip's Answer</h3>
+                    <p>Hello Eugenia,<br>Great meeting you!<br>Thank you for your question. Your inquiry about the cover letter shows that you are taking the first steps toward a successful career. You are on the right track.</p>
+                    <p>When applying for a job, it is essential to pay attention to the hiring party's requirements. Not everyone requires a cover letter, and some may have a form to fill out as the first step requiring a resume. The next steps may require one and to save time, some call for interviews on the basis of the resume.</p>
+                    <p>If they require a cover letter, look into the hiring authority, and their roles may help shape the cover letter. A person with a teaching background may seek an administrative position at a school. For that particular position, the applicant may want to emphasize experiences in the school in helping out the front office at times besides teaching. Cover letters may need changes in wording to the hiring requirements for references, i.g., a volunteering experience at a library may add to qualifications for a library opening.</p>
+                    <p>There are examples of cover letters on the Internet that may help you find a way to apply for a job. Below are some examples of how to set the stepping stones. I hope this is helpful. Some of them offer free printable cover letters, and some do not. It is wise to check on the privacy policy.</p>
+                    <p>Finally, there are AI-generated cover letters on the Internet; while we can get an idea from them, it is wiser to cater the cover letter in the right direction by keeping what serves the individual needs. A library is a good source to check for information on cover letters with books, and online.</p>
+                    <p>Good luck!</p>
+                    <ol>
+                        <li>https://www.upwork.com/resources/how-to-write-a-cover-letter.</li>
+                        <li>https://www.canva.com/letters/templates/cover-letters/</li>
+                        <li>https://www.indeed.com/career-advice/cover-letter-samples</li>
+                    </ol>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Michael Esposito</div>
+                        <div class="author-title">Director, Financial Reporting</div>
+                        <div class="answer-meta">22 Answers · 📍 New York, New York</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Sep 03, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Michael's Answer</h3>
+                    <p>Hi Eugenia,<br>The best advice I received about a cover letter was that it should reflect the type of person you'd be presenting yourself as in the (hopeful!) interview.</p>
+                    <p>What I mean is, if you're interviewing for an agile shootfromthehip tech company, then have some fun with it. Talk about how your skills can help them, where you specifically see yourself making an impact etc.</p>
+                    <p>If you're looking at a more 'rigid' company, then I'd look to lean more into your desire to HEAR more.<br>I'm excited to hear more about what you wish you could get more of from the people that currently/previously have had this role etc.</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Gary Donnelly</div>
+                        <div class="author-title">Technical Writer</div>
+                        <div class="answer-meta">1 Answer · 📍 River Grove, Illinois</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Aug 12, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Gary's Answer</h3>
+                    <p>A good cover letter, like a good resume, must address the needs of a prospective employer. Study the job posting thoroughly before writing. Jot down all of the important qualifications they are asking for and narrow the list down to what you think are the top three to five that the hiring manager wants in a candidate. It can be a bit of a guessing game but hopefully, the job posting will give you a hint at what problems must be solved by the person to be hired. Think about your experience and jot down any relevant experience, education or training that make your background relevant. Make sure to write these down in detail so that if you get an interview, you can immediately address the hiring manager's needs. Think of real-world examples of how you solved these problems.</p>
+                    <p>Make a list of keywords that appear in the job posting. Narrow that list down to what you think are the most important, just like the list of qualifications above. You'll need to add these keyword into both, your resume and cover letter so that any recognition software the hiring company's HR department uses for screening will capture them. You must pass these electronic screenings before a human actually reads your cover letter and resume.</p>
+                    <p>Make sure that you aren't using a general, boilerplate resume/cover letter. In today's competitive job search environment, it's important to tailor every resume and cover letter to the specific job you are pursuing. Yes, that take time and energy but it also sends a message to a prospective employer that you are serious about wanting this job. Personalize the cover letter. If the hiring manager's name doesn't appear, call the company and ask the receptionist if they can find out who the hiring manager is for the position you are seeking. If they can't give you the information, write "Dear Hiring Manager," for the salutation. Never write, "To Whom it May Concern." That opening went out of style in the late 1970s. Your letter should be short and should provide a teaser as to how your background answers the hiring manager's needs. Remember, the purpose of a cover letter and resume are to provide enough information about you to make that hiring manager curious enough to grant you a personal interview. Never focus on your wants and desires. It must be 100% about how hiring you is the best move they can make to solve their immediate and future needs.</p>
+                    <p><strong>Gary recommends the following next steps:</strong></p>
+                    <p>Seek out a professional resume writer to help.</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Aniko Bouley, ACP</div>
+                        <div class="author-title">Paralegal</div>
+                        <div class="answer-meta">2 Answers · 📍 Bedford, New Hampshire</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Aug 15, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Aniko's Answer</h3>
+                    <p>Hi Eugenia,<br>I would follow the same style or template for your cover letter as your resume. Include a clear objective specific to the position you are applying, highlight your experience related to the position (specifically what makes you stand out from other applicants), and explain how you can help the company. Your cover letter should be short and concise.<br>I hope that this helps.</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+            
+            <article class="answer">
+                <div class="answer-header">
+                    <div class="answer-avatar"></div>
+                    <div class="answer-author">
+                        <div class="author-name">Samira Hasnain</div>
+                        <div class="author-title">Content Writer | Aspiring Clinical Psychologist</div>
+                        <div class="answer-meta">16 Answers · 📍 Karachi, Sindh, Pakistan</div>
+                    </div>
+                    <div class="answer-meta">
+                        Updated Jul 29, 2024 · Translate · Share
+                    </div>
+                </div>
+                <div class="answer-content">
+                    <h3>Samira's Answer</h3>
+                    <p>💡 https://resume.io/cover-letter-templates<br>
+                    💡 https://create.microsoft.com/en-us/templates/cover-letters<br>
+                    💡 https://resumegenius.com/cover-letter-templates<br>
+                    💡 https://www.canva.com/create/cover-letters/</p>
+                    <p style="font-style: italic; color: #666; margin-top: 10px;">Hi Samira! Can you give an overview of what a cover letter consists of and summarize what information the links will provide for Eugenia? Sharyn Grose, Admin Jul 30, 2024</p>
+                </div>
+                <div class="answer-footer">
+                    <span class="vote-count">0 👍</span>
+                </div>
+            </article>
+        </main>
+        
+        <aside class="sidebar">
+            <div class="related-questions">
+                <h3 class="sidebar-title">Related Questions</h3>
+                <div class="related-question">
+                    <span>Should I talk about my failures when being interviewed for a job?</span>
+                </div>
+                <div class="related-question">
+                    <span>When asked the question, "Why do you want this job" what's the best way to respond?</span>
+                </div>
+                <div class="related-question">
+                    <span>What are some good questions to ask the interviewer to get a better understanding of the company you work for</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <ul>
+                    <li><span>Mission</span></li>
+                    <li><span>Our Impact</span></li>
+                    <li><span>Team</span></li>
+                    <li><span>Hiring</span></li>
+                    <li><span>Blog</span></li>
+                    <li><span>Press</span></li>
+                    <li><span>Contact Us</span></li>
+                    <li><span>Our AI Career Coach</span></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Get Involved</h3>
+                <ul>
+                    <li><span>For Students</span></li>
+                    <li><span>For Professionals</span></li>
+                    <li><span>For Teachers</span></li>
+                    <li><span>Donate</span></li>
+                    <li><span>Skills-based Projects</span></li>
+                    <li><span>Host a Chapter</span></li>
+                    <li><span>Be an Ambassador</span></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Partnerships</h3>
+                <ul>
+                    <li><span>K-12 Schools</span></li>
+                    <li><span>Nonprofits</span></li>
+                    <li><span>Higher Education</span></li>
+                    <li><span>Employee Engagement</span></li>
+                    <li><span>Sponsorships</span></li>
+                    <li><span>Workforce Development Boards</span></li>
+                    <li><span>Trade Associations</span></li>
+                    <li><span>Professional Associations</span></li>
+                    <li><span>Conference Volunteering</span></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>More</h3>
+                <ul>
+                    <li><span>Career Ready Resource Page</span></li>
+                    <li><span>Data and Insights</span></li>
+                    <li><span>Community Guidelines</span></li>
+                    <li><span>DEI Guidelines</span></li>
+                    <li><span>Terms of Service</span></li>
+                    <li><span>Privacy Policy</span></li>
+                    <li><span>Non Discrimination Policy</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © Copyright 2025. All Rights Reserved.
+        </div>
+    </footer>
+ </script>
+    <!-- Click tracking script -->
+    <script src="/track-clicks.js"></script>
+</body>
+    <a href="index1.html" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#fff;border-radius:50px;padding:12px 24px;box-shadow:0 2px 8px rgba(0,0,0,0.2);text-decoration:none;font-weight:bold;color:#333;">Back</a>
+</html>
