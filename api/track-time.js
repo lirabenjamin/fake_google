@@ -12,16 +12,15 @@ export default async function handler(req, res) {
     const { 
       prolificId, 
       eventType, 
-      linkClicked, 
-      linkText, 
-      currentActiveTime, 
+      totalActiveTime, 
+      sessionDuration, 
       timestamp, 
       userAgent, 
       referrer, 
       pageUrl 
     } = req.body;
 
-    if (!prolificId || !linkClicked) {
+    if (!prolificId || !eventType) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -29,12 +28,11 @@ export default async function handler(req, res) {
     const db = client.db(process.env.MONGODB_DATABASE || 'research_tracking');
     const collection = db.collection(process.env.MONGODB_COLLECTION || 'click_events');
 
-    const clickData = {
+    const timeData = {
       prolificId,
-      eventType: eventType || 'click',
-      linkClicked,
-      linkText: linkText || '',
-      currentActiveTime: currentActiveTime || 0,
+      eventType,
+      totalActiveTime: totalActiveTime || 0,
+      sessionDuration: sessionDuration || 0,
       timestamp: timestamp || new Date().toISOString(),
       userAgent: userAgent || req.headers['user-agent'],
       referrer: referrer || req.headers.referer,
@@ -43,16 +41,16 @@ export default async function handler(req, res) {
       createdAt: new Date()
     };
 
-    const result = await collection.insertOne(clickData);
+    const result = await collection.insertOne(timeData);
     
     res.status(200).json({ 
       success: true, 
       id: result.insertedId,
-      message: 'Click tracked successfully' 
+      message: 'Time data tracked successfully' 
     });
 
   } catch (error) {
-    console.error('Error tracking click:', error);
+    console.error('Error tracking time:', error);
     res.status(500).json({ error: 'Internal server error' });
   } finally {
     await client.close();
