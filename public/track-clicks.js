@@ -161,15 +161,71 @@
     });
   }
 
-  // Add click listeners to all links
+  // Add PROLIFIC_PID to internal links and set up click tracking
   function initializeTracking() {
+    const prolificId = getProlificId();
     const links = document.querySelectorAll('a[href]');
     
+    console.log(`Initializing tracking with PROLIFIC_PID: ${prolificId}`);
+    console.log(`Found ${links.length} links to process`);
+    
+    let modifiedLinks = 0;
+    
     links.forEach(link => {
+      // Add click tracking
       link.addEventListener('click', function(event) {
         trackClick(this, event);
       });
+      
+      // Preserve PROLIFIC_PID for internal links
+      if (prolificId && isInternalLink(link)) {
+        const originalHref = link.href;
+        preserveProlificIdInLink(link, prolificId);
+        if (link.href !== originalHref) {
+          modifiedLinks++;
+        }
+      }
     });
+    
+    console.log(`Modified ${modifiedLinks} links to preserve PROLIFIC_PID`);
+  }
+
+  // Check if a link is internal (same domain or relative)
+  function isInternalLink(link) {
+    try {
+      const linkUrl = new URL(link.href, window.location.origin);
+      const currentUrl = new URL(window.location.href);
+      
+      // Same domain or relative link
+      return linkUrl.hostname === currentUrl.hostname || 
+             link.getAttribute('href').startsWith('/') ||
+             link.getAttribute('href').startsWith('./') ||
+             link.getAttribute('href').startsWith('../') ||
+             !link.getAttribute('href').includes('://');
+    } catch (e) {
+      // If URL parsing fails, assume it's internal
+      return true;
+    }
+  }
+
+  // Add PROLIFIC_PID to a link if it doesn't already have it
+  function preserveProlificIdInLink(link, prolificId) {
+    try {
+      const linkUrl = new URL(link.href, window.location.origin);
+      
+      // Only add if PROLIFIC_PID is not already present
+      if (!linkUrl.searchParams.has('PROLIFIC_PID')) {
+        linkUrl.searchParams.set('PROLIFIC_PID', prolificId);
+        link.href = linkUrl.toString();
+      }
+    } catch (e) {
+      // If URL parsing fails, try a simpler approach
+      const href = link.getAttribute('href');
+      if (href && !href.includes('PROLIFIC_PID')) {
+        const separator = href.includes('?') ? '&' : '?';
+        link.href = href + separator + 'PROLIFIC_PID=' + encodeURIComponent(prolificId);
+      }
+    }
   }
 
   // Send final active time data when page unloads
