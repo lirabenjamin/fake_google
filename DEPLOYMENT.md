@@ -5,7 +5,7 @@
 2. Vercel account
 
 ## Setup Steps
-
+ 
 ### 1. MongoDB Setup
 1. Create a MongoDB Atlas cluster
 2. Create a database called `research_tracking`
